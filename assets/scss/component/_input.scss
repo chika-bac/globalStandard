@@ -1,0 +1,303 @@
+@use "../global" as *;
+
+/*!
+component > form-field
+------------------------------
+*/
+input,
+textarea,
+select {
+  outline: none;
+  border: 1px solid transparent;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include mq(lg) {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+// メッセージの部分だけラベルが上揃いになるように
+.form-field-message {
+  align-items: flex-start;
+  margin-top: 3px;
+}
+
+.form-field__head {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  @include mq(lg) {
+    min-width: 180px;
+  }
+}
+
+.form-field__label {
+  font-size: 14px;
+
+  &.is-error {
+    color: var(--color-red);
+  }
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
+}
+
+.form-field__tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+  background: var(--color-red);
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 2px 6px;
+
+  @include mq(lg) {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+}
+
+.form-field__item {
+  width: 100%;
+  @include mq(lg) {
+    flex: 1;
+  }
+}
+
+.form-text {
+  border-radius: 8px;
+  background: var(--color-gray);
+  padding: 16px;
+  font-size: 14px;
+  width: 100%;
+
+  &::placeholder {
+    color: var(--color-dgray);
+  }
+
+  &:focus {
+    background: var(--color-sub-lblue);
+    border-color: var(--color-main);
+  }
+
+  &.is-error {
+    border-color: var(--color-red);
+    background: #fff0f7;
+  }
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
+}
+
+.form-select {
+  position: relative;
+  width: 100%;
+  height: 56px;
+  padding: 14.5px 15px;
+  font-size: 14px;
+  appearance: none;
+  cursor: pointer;
+  background-image: url(../images/icon-select-arrow.svg), linear-gradient(to left, #9ed0e0 52px, #f5f5f5 52px);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center right 11px, center center;
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  &:focus {
+    border-color: var(--color-main);
+  }
+
+  &.is-error {
+    background-image: url(../images/icon-select-arrow.svg), linear-gradient(to left, #ce2073 52px, #fff0f7 52px);
+    border-color: #ce2073;
+  }
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
+}
+
+.form-field__radios {
+  display: flex;
+  gap: 24px;
+}
+
+.form-radio {
+  @include mq(lg) {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+.form-radio__input {
+  // ラジオボタンがチェックされた時だけ中の丸が表示される
+  &:checked {
+    + .form-radio__text {
+      font-weight: 700;
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:focus + .form-radio__text {
+    // ラジオボタンにフォーカスした時の外枠
+    &::before {
+      border-color: var(--color-main);
+    }
+  }
+}
+
+.form-radio__text {
+  // 2px: 円のボーダー分
+  padding-left: calc(8px + 24px - 2px);
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+
+  @include mq(lg) {
+    font-size: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  // ラジオボタンの疑似要素
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+
+  // ラジオボタンの外側の枠
+  &:before {
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-gray);
+    left: 0;
+    border: 1px solid transparent;
+  }
+
+  // ラジオボタンの中の丸
+  &:after {
+    width: 12px;
+    height: 12px;
+    background: var(--color-main);
+    left: 6px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+}
+
+.form-textarea {
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  background: var(--color-gray);
+  padding: 16px;
+  font-size: 14px;
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
+
+  &:focus {
+    background: var(--color-sub-lblue);
+    border-color: var(--color-main);
+  }
+
+  &::placeholder {
+    color: var(--color-dgray);
+  }
+
+  &.is-error {
+    border-color: var(--color-red);
+    background: #fff0f7;
+  }
+}
+
+// .form-checkbox {
+// }
+
+.form-checkbox__input {
+  // フォームバリデーションを有効にするため
+  appearance: auto;
+
+  // デフォルトcheckboxを非表示に
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  &:checked {
+    + .form-checkbox__text {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:focus + .form-checkbox__text {
+    // チェックした時の外枠
+    &::before {
+      border-color: var(--color-main);
+    }
+  }
+
+  &.is-error + .form-checkbox__text {
+    &::before {
+      border-color: var(--color-red);
+      background: #fff0f7;
+    }
+  }
+}
+
+.form-checkbox__text {
+  position: relative;
+  padding-left: calc(12px + 24px);
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  // チェックボックスの外枠
+  &::before {
+    width: 24px;
+    height: 24px;
+    background: var(--color-gray);
+    border-radius: 4px;
+    border: 1px solid transparent;
+  }
+
+  // チェックマーク
+  &::after {
+    left: 5px;
+    top: 3px;
+    width: 15px;
+    height: 10px;
+    border-left: 2px solid var(--color-main);
+    border-bottom: 2px solid var(--color-main);
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+}

@@ -14,18 +14,21 @@
     <div class="header__inner">
       <h1 class="header__logo">Global standard</h1>
       <nav class="header__nav" aria-label="ヘッダーナビゲーション">
-        <ul class="header__list">
-          <li class="header__item"><a href="" class="header__nav-link">トップ</a></li>
-          <li class="header__item"><a href="" class="header__nav-link">当社について</a></li>
-          <li class="header__item"><a href="" class="header__nav-link">サービス</a></li>
-          <li class="header__item"><a href="" class="header__nav-link">導入事例</a></li>
-          <li class="header__item"><a href="" class="header__nav-link">お知らせ</a></li>
-        </ul>
+        <?php wp_nav_menu(
+          array(
+            'depth' => 1,
+            'theme_location' => 'global',
+            'container' => '',
+            'menu_class' => 'header__list'
+          )
+        ); ?>
         <div class="header__nav-button">
-          <a href="#" class="button">資料ダウンロード</a>
-        </div>
-        <div class="header__nav-button">
-          <a href="#" class="button">お問い合わせ</a>
+          <div class="nav-button">
+            <a href="#" class="button">資料ダウンロード</a>
+          </div>
+          <div class="nav-button">
+            <a href="#" class="button">お問い合わせ</a>
+          </div>
         </div>
       </nav>
 
@@ -41,14 +44,21 @@
   <!-- drawer -->
   <div id="js-drawer-panel" class="drawer__panel">
     <nav class="drawer__nav" aria-label="ドロワーナビゲーション">
-      <ul class="drawer__nav-list">
-        <li class="drawer__nav-item"><a href="" class="drawer__link">トップ</a></li>
-        <li class="drawer__nav-item"><a href="" class="drawer__link">当社について</a></li>
-        <li class="drawer__nav-item"><a href="" class="drawer__link">サービス</a></li>
-        <li class="drawer__nav-item"><a href="" class="drawer__link">導入事例</a></li>
-        <li class="drawer__nav-item"><a href="" class="drawer__link">お知らせ</a></li>
-        <li class="drawer__nav-item"><a href="#" class="drawer__button button">資料ダウンロード</a></li>
-        <li class="drawer__nav-item"><a href="#" class="drawer__button button">お問い合わせ</a></li>
-      </ul>
+      <?php wp_nav_menu(
+        array(
+          'depth' => 1,
+          'theme_location' => 'drawer',
+          'container' => '',
+          'menu_class' => 'drawer__nav-list'
+        )
+      ); ?>
+      <div class="drawer__nav-button">
+        <div class="nav-button">
+          <a href="#" class="button button--primary">資料ダウンロード</a>
+        </div>
+        <div class="nav-button">
+          <a href="#" class="button button--secondary">お問い合わせ</a>
+        </div>
+      </div>
     </nav>
   </div>

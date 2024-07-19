@@ -22,16 +22,12 @@ html {
 }
 
 body {
-  // font-family: var(--font-family-jp);
-  // font-size: var(--font-size-sp);
-  // line-height: var(--line-height-base);
-  // color: var(--color-brown);
-  // background-color: var(--color-sub-lblue);
-  // font-weight: 400;
-
-  @include mq(md) {
-    // font-size: var(--font-size-pc);
-  }
+  font-family: var(--font-family-jp);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  font-weight: 500;
 
   // メニューopen時にスクロール禁止
   &.isScrollAllowed {

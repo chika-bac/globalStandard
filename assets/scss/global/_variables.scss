@@ -1,2 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,500&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@1,700&display=swap");
+
 :root {
+  // font-family
+  --font-family-jp: "Noto Sans JP", sans-serif;
+  --font-family-en: "Fira Sans", sans-serif;
+  --font-family-logo: "Roboto", sans-serif;
+
+  // font-color
+  --color-black: #1a1a1a;
+  --color-white: #ffffff;
+
+  // color
+  --color-main: #163f74;
+  --color-main-dark: #002a52;
+  --color-main-light: #eef3f8;
+  --color-accent-yellow: #fef251;
+  --color-accent-red: #d33365;
 }

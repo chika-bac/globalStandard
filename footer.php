@@ -7,7 +7,7 @@
           <span class="footer__title-ja">資料ダウンロード</span>
         </p>
         <div class="footer__button">
-          <a href="" class="button">View more</a>
+          <a href="" class="button button--more">View more</a>
         </div>
       </div>
       <div class="footer__contact">
@@ -16,12 +16,12 @@
           <span class="footer__title-ja">お問い合わせ</span>
         </p>
         <div class="footer__button">
-          <a href="" class="button">View more</a>
+          <a href="" class="button button--more">View more</a>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
-      <p class="footer__logo"></p>
+      <p class="footer__logo">Global Standard</p>
       <ul class="footer__info">
         <li class="footer__info-item">〒550-1000　大阪市西区土佐堀9-5-5</li>
         <li class="footer__info-item">TEL　06-123-4567</li>
@@ -34,7 +34,7 @@
 
 <!-- go to top -->
 <div class="floating">
-  <a href="#"><i class="fas fa-chevron-up"></i></a>
+  <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-top.svg" alt=""></a>
 </div>
 <?php wp_footer(); ?>
 </body>

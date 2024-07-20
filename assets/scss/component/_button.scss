@@ -6,9 +6,7 @@ component > button
 */
 .button{
   display: inline-block;
-
 text-align: center;
-
 font-weight: 500;
 cursor: pointer;
 }
@@ -37,4 +35,30 @@ cursor: pointer;
   background: #FFF;
   color: #023E78;
   border: 1px solid currentColor;
+}
+
+.button--more{
+  font-family: var(--font-family-en);
+  background: transparent;
+  color: #FFF400;
+  border: 2px solid #FFF400;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 295px;
+  font-size: 16px;
+  position: relative;
+  transition: all 0.3s;
+
+  &:hover{
+background: #FFF400;
+color: #1a1a1a;
+  }
+
+  &:after{
+    content: url(../../assets/img/icon-arrow.svg);
+    position: absolute;
+    right: 20px;
+    top:50%;
+    transform: translateY(-50%);
+  }
 }

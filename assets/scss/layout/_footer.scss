@@ -4,3 +4,115 @@
 layout > footer
 ------------------------------
 */
+.footer {
+
+}
+
+.footer__inner {
+
+}
+
+.footer__top {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.footer__download,
+.footer__contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 46px;
+  padding-bottom: 25px;
+  text-align: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer__download {
+  background-image: url(../../assets/img/footer-bg-download-sp.png);
+}
+
+.footer__contact {
+  background-image: url(../../assets/img/footer-bg-contact-sp.png);
+
+}
+
+.footer__title {
+  color: #FFF;
+  line-height: 1.2;
+  & span{
+    display: block;
+  }
+}
+
+.footer__title-en {
+  font-family: var(--font-family-en);
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+
+}
+
+.footer__title-ja {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.footer__button {
+  margin-top: 40px;
+
+}
+
+.footer__bottom {
+  padding-top: 70px;
+  background: #1A1A1A;
+  color: #FFF;
+}
+
+.footer__logo {
+text-align: center;
+font-family: var(--font-family-logo);
+font-size: 40px;
+font-style: italic;
+font-weight: 700;
+}
+
+.footer__info {
+  // 中央寄せ
+  width: fit-content;
+  margin: auto;
+  margin-top: 22px;
+}
+
+.footer__info-item {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer__copy {
+  padding-top: 38px;
+  padding-bottom: 13px;
+font-size: 12px;
+font-weight: 500;
+display: block;
+text-align: center;
+}
+
+.floating {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  z-index: 99;
+
+  & img{
+    width: 40px;
+    height: 40px;
+  }
+}
+
+

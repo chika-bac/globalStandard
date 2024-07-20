@@ -27,7 +27,7 @@ layout > header
 
 .header__logo {
   color: #023E78;
-font-family: Roboto;
+font-family: var(--font-family-logo);
 font-size: 28px;
 font-style: italic;
 font-weight: 700;

@@ -24,10 +24,10 @@
         ); ?>
         <div class="header__nav-button">
           <div class="nav-button">
-            <a href="#" class="button">資料ダウンロード</a>
+            <a href="#" class="button button--sm button--secondary">資料ダウンロード</a>
           </div>
           <div class="nav-button">
-            <a href="#" class="button">お問い合わせ</a>
+            <a href="#" class="button button--sm button--primary">お問い合わせ</a>
           </div>
         </div>
       </nav>
@@ -54,10 +54,10 @@
       ); ?>
       <div class="drawer__nav-button">
         <div class="nav-button">
-          <a href="#" class="button button--primary">資料ダウンロード</a>
+          <a href="#" class="button button--lg button--primary">資料ダウンロード</a>
         </div>
         <div class="nav-button">
-          <a href="#" class="button button--secondary">お問い合わせ</a>
+          <a href="#" class="button button--lg button--secondary">お問い合わせ</a>
         </div>
       </div>
     </nav>

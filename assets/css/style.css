@@ -233,22 +233,22 @@ component > button
 }
 
 .button--primary {
-  background: #023E78;
-  color: #FFF;
+  background: #023e78;
+  color: #fff;
   border: 1px solid currentColor;
 }
 
 .button--secondary {
-  background: #FFF;
-  color: #023E78;
+  background: #fff;
+  color: #023e78;
   border: 1px solid currentColor;
 }
 
 .button--more {
   font-family: var(--font-family-en);
   background: transparent;
-  color: #FFF400;
-  border: 2px solid #FFF400;
+  color: #fff400;
+  border: 2px solid #fff400;
   padding-top: 27px;
   padding-bottom: 27px;
   width: 295px;
@@ -257,8 +257,17 @@ component > button
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+@media screen and (min-width: 900px) {
+  .button--more {
+    border: 3px solid #fff400;
+    padding-top: 31px;
+    padding-bottom: 32px;
+    width: 315px;
+    font-size: 24px;
+  }
+}
 .button--more:hover {
-  background: #FFF400;
+  background: #fff400;
   color: #1a1a1a;
 }
 .button--more:after {
@@ -268,6 +277,11 @@ component > button
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+@media screen and (min-width: 900px) {
+  .button--more:after {
+    right: 29px;
+  }
 }
 
 /*!
@@ -624,7 +638,7 @@ layout > header
 }
 
 .header__logo {
-  color: #023E78;
+  color: #023e78;
   font-family: var(--font-family-logo);
   font-size: 28px;
   font-style: italic;
@@ -664,7 +678,7 @@ layout > header
   }
 }
 .header__list li {
-  color: #1A1A1A;
+  color: #1a1a1a;
   text-align: center;
   font-size: clamp(0.813rem, 0.664rem + 0.26vw, 0.875rem);
   font-weight: 500;
@@ -722,7 +736,7 @@ layout > header > drawer-icon
   left: 0;
   width: 27px;
   height: 2.25px;
-  background: #023E78;
+  background: #023e78;
   border-radius: 3px;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -741,7 +755,7 @@ layout > header > drawer-icon
   width: 100%;
   height: 100vh;
   padding-top: 60px;
-  background: #023E78;
+  background: #023e78;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   -webkit-transition: -webkit-transform 0.3s linear;
@@ -801,6 +815,14 @@ layout > footer
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media screen and (min-width: 900px) {
+  .footer__top {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 
 .footer__download,
 .footer__contact {
@@ -821,17 +843,35 @@ layout > footer
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media screen and (min-width: 900px) {
+  .footer__download,
+  .footer__contact {
+    width: 50%;
+    padding-top: 55px;
+    padding-bottom: 49px;
+  }
+}
 
 .footer__download {
   background-image: url(../../assets/img/footer-bg-download-sp.png);
+}
+@media screen and (min-width: 900px) {
+  .footer__download {
+    background-image: url(../../assets/img/footer-bg-download-pc.png);
+  }
 }
 
 .footer__contact {
   background-image: url(../../assets/img/footer-bg-contact-sp.png);
 }
+@media screen and (min-width: 900px) {
+  .footer__contact {
+    background-image: url(../../assets/img/footer-bg-contact-pc.png);
+  }
+}
 
 .footer__title {
-  color: #FFF;
+  color: #fff;
   line-height: 1.2;
 }
 .footer__title span {
@@ -846,6 +886,12 @@ layout > footer
   text-transform: uppercase;
   margin-bottom: 6px;
 }
+@media screen and (min-width: 900px) {
+  .footer__title-en {
+    font-size: 60px;
+    margin-bottom: 3px;
+  }
+}
 
 .footer__title-ja {
   font-size: 16px;
@@ -858,8 +904,13 @@ layout > footer
 
 .footer__bottom {
   padding-top: 70px;
-  background: #1A1A1A;
-  color: #FFF;
+  background: #1a1a1a;
+  color: #fff;
+}
+@media screen and (min-width: 900px) {
+  .footer__bottom {
+    padding-top: 120px;
+  }
 }
 
 .footer__logo {
@@ -868,6 +919,11 @@ layout > footer
   font-size: 40px;
   font-style: italic;
   font-weight: 700;
+}
+@media screen and (min-width: 900px) {
+  .footer__logo {
+    font-size: 52px;
+  }
 }
 
 .footer__info {
@@ -891,12 +947,25 @@ layout > footer
   display: block;
   text-align: center;
 }
+@media screen and (min-width: 900px) {
+  .footer__copy {
+    padding-top: 76px;
+    padding-bottom: 17px;
+    font-size: 14px;
+  }
+}
 
 .floating {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 10px;
   z-index: 99;
+}
+@media screen and (min-width: 900px) {
+  .floating {
+    bottom: 40px;
+    right: 20px;
+  }
 }
 .floating img {
   width: 40px;

@@ -5,21 +5,22 @@ layout > footer
 ------------------------------
 */
 .footer {
-
 }
 
 .footer__inner {
-
 }
 
 .footer__top {
   display: flex;
   flex-direction: column;
 
+  @include mq(lg) {
+    flex-direction: row;
+  }
 }
 
 .footer__download,
-.footer__contact{
+.footer__contact {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,21 +30,34 @@ layout > footer
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include mq(lg) {
+    width: 50%;
+    padding-top: 55px;
+    padding-bottom: 49px;
+  }
 }
 
 .footer__download {
   background-image: url(../../assets/img/footer-bg-download-sp.png);
+
+  @include mq(lg) {
+    background-image: url(../../assets/img/footer-bg-download-pc.png);
+  }
 }
 
 .footer__contact {
   background-image: url(../../assets/img/footer-bg-contact-sp.png);
 
+  @include mq(lg) {
+    background-image: url(../../assets/img/footer-bg-contact-pc.png);
+  }
 }
 
 .footer__title {
-  color: #FFF;
+  color: #fff;
   line-height: 1.2;
-  & span{
+  & span {
     display: block;
   }
 }
@@ -56,6 +70,10 @@ layout > footer
   text-transform: uppercase;
   margin-bottom: 6px;
 
+  @include mq(lg) {
+    font-size: 60px;
+    margin-bottom: 3px;
+  }
 }
 
 .footer__title-ja {
@@ -65,21 +83,28 @@ layout > footer
 
 .footer__button {
   margin-top: 40px;
-
 }
 
 .footer__bottom {
   padding-top: 70px;
-  background: #1A1A1A;
-  color: #FFF;
+  background: #1a1a1a;
+  color: #fff;
+
+  @include mq(lg) {
+    padding-top: 120px;
+  }
 }
 
 .footer__logo {
-text-align: center;
-font-family: var(--font-family-logo);
-font-size: 40px;
-font-style: italic;
-font-weight: 700;
+  text-align: center;
+  font-family: var(--font-family-logo);
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 700;
+
+  @include mq(lg) {
+    font-size: 52px;
+  }
 }
 
 .footer__info {
@@ -97,22 +122,31 @@ font-weight: 700;
 .footer__copy {
   padding-top: 38px;
   padding-bottom: 13px;
-font-size: 12px;
-font-weight: 500;
-display: block;
-text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+
+  @include mq(lg) {
+    padding-top: 76px;
+    padding-bottom: 17px;
+    font-size: 14px;
+  }
 }
 
 .floating {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 10px;
   z-index: 99;
 
-  & img{
+  @include mq(lg) {
+    bottom: 40px;
+    right: 20px;
+  }
+
+  & img {
     width: 40px;
     height: 40px;
   }
 }
-
-

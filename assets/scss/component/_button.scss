@@ -4,44 +4,44 @@
 component > button
 ------------------------------
 */
-.button{
+.button {
   display: inline-block;
-text-align: center;
-font-weight: 500;
-cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-.button--lg{
+.button--lg {
   padding-top: 22px;
   padding-bottom: 22px;
   width: 295px;
   font-size: 16px;
 }
 
-.button--sm{
+.button--sm {
   padding-top: clamp(1.25rem, 0.658rem + 1.05vw, 1.5rem); // 20px ~ 24px
   padding-bottom: clamp(1.25rem, 0.658rem + 1.05vw, 1.5rem); // 20px ~ 24px
   font-size: clamp(0.813rem, 0.664rem + 0.26vw, 0.875rem); // 13px ~ 14px
   width: clamp(7.813rem, 0.263rem + 13.42vw, 11rem); // 125px ~ 176px
 }
 
-.button--primary{
-  background: #023E78;
-  color: #FFF;
+.button--primary {
+  background: #023e78;
+  color: #fff;
   border: 1px solid currentColor;
 }
 
-.button--secondary{
-  background: #FFF;
-  color: #023E78;
+.button--secondary {
+  background: #fff;
+  color: #023e78;
   border: 1px solid currentColor;
 }
 
-.button--more{
+.button--more {
   font-family: var(--font-family-en);
   background: transparent;
-  color: #FFF400;
-  border: 2px solid #FFF400;
+  color: #fff400;
+  border: 2px solid #fff400;
   padding-top: 27px;
   padding-bottom: 27px;
   width: 295px;
@@ -49,16 +49,28 @@ cursor: pointer;
   position: relative;
   transition: all 0.3s;
 
-  &:hover{
-background: #FFF400;
-color: #1a1a1a;
+  @include mq(lg) {
+    border: 3px solid #fff400;
+    padding-top: 31px;
+    padding-bottom: 32px;
+    width: 315px;
+    font-size: 24px;
   }
 
-  &:after{
+  &:hover {
+    background: #fff400;
+    color: #1a1a1a;
+  }
+
+  &:after {
     content: url(../../assets/img/icon-arrow.svg);
     position: absolute;
     right: 20px;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
+
+    @include mq(lg) {
+      right: 29px;
+    }
   }
 }

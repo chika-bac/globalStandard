@@ -32,23 +32,12 @@ if (menuIcon) {
 fvスライダー
 ================================================ */
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  // direction: 'vertical',
+
   loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
+  speed: 1000,
+  autoplay: {
+    delay: 7000,
+    disableOnInteraction: false,
+    waitForTransition: false,
   },
 });

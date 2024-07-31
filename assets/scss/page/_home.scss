@@ -1,6 +1,69 @@
 @use "../global" as *;
 
-.swiper {
-  width: 600px;
-  height: 300px;
+/*!
+fv
+------------------------------
+*/
+.fv {
+
+}
+
+.fv__inner {
+  position: relative;
+
+}
+
+.fv__swiper {
+  margin-left: 40px;
+
+}
+
+.fv__swiper-wrapper {
+
+}
+
+.fv__swiper-slide {
+}
+
+.fv__swiper-slide-img {
+}
+
+.fv__text {
+  position: absolute;
+  bottom: 20px;
+  left: 19px;
+  z-index: 2;
+}
+
+.fv__title {
+  color: #023E78;
+  font-family: var(--font-family-en);
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 500;
+  text-transform: uppercase;
+
+
+  & span{
+    display: block;
+    width: fit-content;
+    background: #FFF;
+    line-height: 1.2;
+    padding: 2px 4px;
+
+    & + span {
+      margin-top: 8px;
+    }
+  }
+}
+
+.fv__desc {
+  color: #FFF;
+  font-family: var(--font-family-ja);
+  font-size: 16px;
+  font-weight: 700;
+  background: #023E78;
+  line-height: 1.2;
+  padding: 2px 4px;
+  margin-top: 16px;
 }

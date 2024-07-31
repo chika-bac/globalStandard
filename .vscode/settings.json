@@ -1,4 +1,4 @@
 {
   "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
-  "notebook.defaultFormatter": "esbenp.prettier-vscode"
+  "notebook.defaultFormatter": null
 }

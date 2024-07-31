@@ -4,8 +4,12 @@
 layout > container
 ------------------------------
 */
-.section{
+.section {
   margin-top: 60px;
   margin-inline: auto;
   padding-inline: 20px;
+
+  @include mq(md) {
+    padding-inline: 0;
+  }
 }

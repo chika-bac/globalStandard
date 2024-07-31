@@ -5,7 +5,7 @@ component > heading
 ------------------------------
 */
 .heading {
-  color: #023E78;
+  color: #023e78;
   line-height: 1.2;
 }
 
@@ -15,11 +15,20 @@ component > heading
   font-style: italic;
   font-weight: 500;
   text-transform: uppercase;
+
+  @include mq(md) {
+    font-size: clamp(4.875rem, 2.813rem + 4.3vw, 6.25rem); // 78px ~ 100px
+  }
 }
 
 .heading__ja {
-font-family: var(--font-family-ja);
-font-size: 16px;
-font-weight: 700;
-margin-top: 3px;
+  font-family: var(--font-family-ja);
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 3px;
+
+  @include mq(md) {
+    font-size: clamp(1.25rem, 0.875rem + 0.78vw, 1.5rem); // 20px ~ 24px
+    margin-top: 0;
+  }
 }

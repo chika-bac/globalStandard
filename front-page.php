@@ -39,6 +39,7 @@
 
   <!-- about -->
   <section class="about section">
+  <div class="about__img-bg hidden-sp"></div>
     <div class="about__inner">
       <div class="about__heading heading">
         <h2 class="heading__en">about us</h2>
@@ -55,7 +56,6 @@
           </p>
         </div>
         <div class="about__img-wrapper">
-
           <div class="about__img">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-img.png" alt="" />
           </div>
@@ -64,7 +64,7 @@
             <span class="more-link__text">View more</span>
             <span class="more-link__circle"></span>
           </a>
-          <div class="about__img-bg"></div>
+          <div class="about__img-bg hidden-pc"></div>
         </div>
       </div>
     </div>

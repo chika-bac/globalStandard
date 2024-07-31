@@ -4,3 +4,22 @@
 component > heading
 ------------------------------
 */
+.heading {
+  color: #023E78;
+  line-height: 1.2;
+}
+
+.heading__en {
+  font-family: var(--font-family-en);
+  font-size: 52px;
+  font-style: italic;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.heading__ja {
+font-family: var(--font-family-ja);
+font-size: 16px;
+font-weight: 700;
+margin-top: 3px;
+}

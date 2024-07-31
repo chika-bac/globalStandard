@@ -6,19 +6,19 @@
       <div class="swiper fv__swiper">
         <div class="swiper-wrapper fv__swiper-wrapper">
           <div class="swiper-slide fv__swiper-slide">
-            <picture class="fv__swiper-slide-img">
+            <picture>
               <source media="(min-width:900px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/fv-img1-pc.png" />
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fv-img1-sp.png" alt="" />
             </picture>
           </div>
           <div class="swiper-slide fv__swiper-slide">
-            <picture class="fv__swiper-slide-img">
+            <picture>
               <source media="(min-width:900px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/fv-img2-pc.png" />
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fv-img2-sp.png" alt="" />
             </picture>
           </div>
           <div class="swiper-slide fv__swiper-slide">
-            <picture class="fv__swiper-slide-img">
+            <picture>
               <source media="(min-width:900px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/fv-img3-pc.png" />
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fv-img3-sp.png" alt="" />
             </picture>

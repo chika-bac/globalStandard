@@ -1,0 +1,65 @@
+@use "../global" as *;
+
+/*!
+component > post-list
+アーカイブ・サイドバーの記事リスト
+------------------------------
+*/
+.post__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post__list-item {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.post__list-img {
+  & img {
+    width: 120px;
+    aspect-ratio: 120/90;
+  }
+}
+
+.post__list-content {
+}
+
+.post__list-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.post__list-left {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #e61264;
+  font-weight: 500;
+}
+
+.post__list-category {
+  border: 1px solid #e61264;
+  font-size: 12px;
+  padding: 4px 12px;
+}
+
+.new-label {
+  font-size: 14px;
+}
+
+.post__list-time {
+  color: #888;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.post__list-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.42;
+  margin-top: 7px;
+  line-height: 1.4;
+}

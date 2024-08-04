@@ -41,3 +41,48 @@ function my_menu_init()
 }
 
 add_action('init', 'my_menu_init');
+
+/** ------------------------------------------
+ * 新着記事にNEWマークを付ける
+ * ----------------------------------------**/
+function attach_new_label()
+{
+  $day = 7; // NEWを表示する日数
+  $today = date_i18n('U'); // 今日の日付を取得
+  $entry = get_the_time('U'); // 投稿日の取得
+  $term = date('U', ($today - $entry)) / 86400; // 何日前か計算
+  if ($day > $term) {
+    return  '<span class="new-label">NEW</span>';
+  } else {
+    return;
+  }
+}
+
+/** ------------------------------------------
+ * カテゴリの取得と表示
+ * ----------------------------------------**/
+function get_post_category($anchor = true)
+{
+  $category = get_the_category();
+  if ($category[0]) {
+    // aタグを付ける場合
+    if ($anchor) {
+      return '<a href="' . get_category_link($category[0]->term_id) . '">' . $category[0]->cat_name . '</a>';
+    } else {
+      // aタグを付けない場合
+      return $category[0]->cat_name;
+    }
+  }
+}
+
+/** ------------------------------------------
+ * タイトルの文字数を制限
+ * ----------------------------------------**/
+function title_trim($title, $length)
+{
+  if (mb_strlen($title) > $length) {
+    $title = mb_substr($title, 0, $length, 'UTF-8');
+    $title .= '…';
+  }
+  return $title;
+}

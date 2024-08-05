@@ -86,3 +86,18 @@ function title_trim($title, $length)
   }
   return $title;
 }
+
+/** ------------------------------------------
+ * サイドバーに表示する記事を取得
+ * ----------------------------------------**/
+function get_sidebar_post($post_type, $posts_per_page, $orderby, $order)
+{
+  $args = array(
+    'posts_per_page' => $posts_per_page,
+    'post_type' => $post_type,
+    'orderby' => $orderby,
+    'order' => $order
+  );
+  $new_posts = new WP_Query($args);
+  return $new_posts;
+}

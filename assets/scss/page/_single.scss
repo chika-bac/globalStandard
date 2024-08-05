@@ -4,26 +4,6 @@
 single
 ------------------------------
 */
-.container {
-  margin-top: 60px;
-  margin-bottom: 100px;
-  margin-inline: auto;
-
-  @include mq(lg) {
-    margin-top: 80px;
-    margin-bottom: 175px;
-  }
-}
-
-.container__inner {
-  padding-inline: 20px;
-
-  @include mq(lg) {
-    padding-inline: 0;
-    display: flex;
-    gap: clamp(1.25rem, -1.711rem + 5.26vw, 2.5rem); // 20px ~ 40px
-  }
-}
 
 .single-main {
   @include mq(lg) {

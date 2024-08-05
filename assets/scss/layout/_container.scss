@@ -7,17 +7,37 @@ layout > container
 .section {
   margin-top: 60px;
   margin-inline: auto;
-  padding-inline: 20px;
 
   @include mq(lg) {
     padding-inline: 0;
   }
 }
 
+.container {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  margin-inline: auto;
+
+  @include mq(lg) {
+    margin-top: 80px;
+    margin-bottom: 175px;
+  }
+}
+
+.container__inner {
+  @include mq(lg) {
+    display: flex;
+    gap: clamp(1.25rem, -1.711rem + 5.26vw, 2.5rem); // 20px ~ 40px
+  }
+}
+
 .inner {
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 0.415rem + 3.71vw, 2.5rem); // 20px ~ 40px
   @include mq(lg) {
     width: calc(1100px / 1280px * 100%);
     margin-inline: auto;
     max-width: 1350px;
+    padding-inline: 0;
   }
 }

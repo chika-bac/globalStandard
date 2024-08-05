@@ -2,37 +2,54 @@
 
 /*!
 component > post-list
-アーカイブ・サイドバーの記事リスト
+記事一覧・カテゴリアーカイブの記事リスト
 ------------------------------
 */
+.main {
+  @include mq(lg) {
+    width: 70%;
+  }
+}
+.home-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+
+  @include mq(lg) {
+    font-size: 32px;
+    line-height: 1.25;
+    margin-bottom: 27px;
+  }
+}
+
 .post__list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 
   @include mq(lg) {
-    gap: 16px;
+    gap: 40px;
   }
 }
 
 .post__list-item {
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: clamp(0.75rem, 0.416rem + 1.48vw, 1.25rem); // 12px ~ 20px
 
   @include mq(lg) {
-    gap: 10px;
+    gap: 20px;
   }
 }
 
 .post__list-img {
   & img {
-    width: 120px;
+    width: clamp(7.5rem, 2.491rem + 22.26vw, 15rem); // 120px ~ 240px
     aspect-ratio: 120/90;
 
     @include mq(lg) {
-      width: clamp(5rem, 2.039rem + 5.26vw, 6.25rem); // 80px ~ 100px
-      aspect-ratio: 100/100;
+      width: clamp(11.875rem, 2.993rem + 15.79vw, 15.625rem); // 190px ~ 250px
+      aspect-ratio: 250/156;
     }
   }
 }
@@ -44,10 +61,6 @@ component > post-list
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  @include mq(lg) {
-    flex-wrap: wrap;
-  }
 }
 .post__list-left {
   display: flex;
@@ -57,7 +70,7 @@ component > post-list
   font-weight: 500;
 
   @include mq(lg) {
-    gap: 4px;
+    gap: 12px;
   }
 }
 
@@ -66,15 +79,18 @@ component > post-list
   font-size: 12px;
   padding: 4px 12px;
 
-  &.side-post__category {
-    padding-top: clamp(0.125rem, -0.171rem + 0.53vw, 0.25rem); // 2px ~ 4px
-    padding-bottom: clamp(0.125rem, -0.171rem + 0.53vw, 0.25rem); // 2px ~ 4px
-    padding-inline: clamp(0.5rem, -0.092rem + 1.05vw, 0.75rem); // 8px ~ 12px
+  @include mq(lg) {
+    font-size: 14px;
+    padding: 8px 24px;
   }
 }
 
 .new-label {
   font-size: 14px;
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
 }
 
 .post__list-time {
@@ -88,9 +104,54 @@ component > post-list
   font-weight: 700;
   line-height: 1.42;
   margin-top: 7px;
-  line-height: 1.4;
 
   @include mq(lg) {
-    margin-top: 4px;
+    font-size: 16px;
+    margin-top: 17px;
+    line-height: 1.7;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 6px;
+
+  @include mq(lg) {
+    margin-top: 60px;
+    gap: 8px;
+  }
+}
+
+.page-numbers {
+  width: 40px;
+  height: 40px;
+  color: #888;
+  font-size: 16px;
+  font-weight: 500;
+  background: #f8f8f8;
+  display: grid;
+  place-items: center;
+
+  @include mq(lg) {
+    width: 50px;
+    height: 50px;
+  }
+
+  &.prev {
+    @include mq(lg) {
+      margin-right: 20px;
+    }
+  }
+  &.next {
+    @include mq(lg) {
+      margin-left: 20px;
+    }
+  }
+
+  &.current {
+    color: #fff;
+    background: #023e78;
   }
 }

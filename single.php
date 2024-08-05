@@ -1,22 +1,5 @@
 <!-- 投稿個別ページ -->
 <?php get_header(); ?>
-<!-- fv -->
-<!-- 後でheader.phpに移して、クラス名はページslugによって変更させる -->
-<div class="lower-fv lower-fv--news">
-  <div class="lower-fv__inner">
-    <h2 class="lower-fv__title">
-      <span class="lower-fv__en">news</span>
-      <span class="lower-fv__ja">ニュース</span>
-    </h2>
-  </div>
-</div>
-<?php if (function_exists('bcn_display')) : ?>
-  <div class="bread-crumb inner">
-    <?php bcn_display(); ?>
-  </div>
-<?php endif; ?>
-<!-- end fv -->
-
 <!-- container -->
 <div class="container">
   <div class="container__inner inner">

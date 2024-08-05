@@ -8,6 +8,97 @@ layout > sidebar
   @include mq(lg) {
     width: 30%;
   }
+
+  // サイドバーの新着記事一覧
+  .post__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include mq(lg) {
+      gap: 16px;
+    }
+  }
+
+  .post__list-item {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(0.75rem, 0.416rem + 1.48vw, 1.25rem); // 12px ~ 20px
+
+    @include mq(lg) {
+      gap: 10px;
+    }
+  }
+
+  .post__list-img {
+    & img {
+      width: clamp(7.5rem, 2.491rem + 22.26vw, 15rem); // 120px ~ 240px
+      aspect-ratio: 120/90;
+
+      @include mq(lg) {
+        width: clamp(5rem, 2.039rem + 5.26vw, 6.25rem); // 80px ~ 100px
+        aspect-ratio: 100/100;
+      }
+    }
+  }
+
+  .post__list-content {
+  }
+
+  .post__list-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mq(lg) {
+      flex-wrap: wrap;
+    }
+  }
+  .post__list-left {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: #e61264;
+    font-weight: 500;
+
+    @include mq(lg) {
+      gap: 4px;
+    }
+  }
+
+  .post__list-category {
+    border: 1px solid #e61264;
+    font-size: 12px;
+    padding: 4px 12px;
+
+    &.side-post__category {
+      padding-top: clamp(0.125rem, -0.171rem + 0.53vw, 0.25rem); // 2px ~ 4px
+      padding-bottom: clamp(0.125rem, -0.171rem + 0.53vw, 0.25rem); // 2px ~ 4px
+      padding-inline: clamp(0.5rem, -0.092rem + 1.05vw, 0.75rem); // 8px ~ 12px
+    }
+  }
+
+  .new-label {
+    font-size: 14px;
+  }
+
+  .post__list-time {
+    color: #888;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .post__list-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.42;
+    margin-top: 7px;
+    line-height: 1.4;
+
+    @include mq(lg) {
+      margin-top: 4px;
+    }
+  }
 }
 .side-post {
   margin-top: 100px;

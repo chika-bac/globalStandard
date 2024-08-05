@@ -4,13 +4,7 @@
       <h2 class="side-post__title">新着記事</h2>
       <div class="side-post__list post__list">
         <?php
-        $args = array(
-          'posts_per_page' => 5,
-          'post_type' => 'post',
-          'orderby' => 'date',
-          'order' => 'DESC'
-        );
-        $new_posts = new WP_Query($args);
+        $new_posts = get_sidebar_post('post', 5, 'date', 'DESC');
         if ($new_posts->have_posts()) :
         ?>
           <?php while ($new_posts->have_posts()) : $new_posts->the_post();

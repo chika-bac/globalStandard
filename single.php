@@ -19,7 +19,7 @@
 
 <!-- container -->
 <div class="container">
-  <div class="container__inner">
+  <div class="container__inner inner">
     <!-- main -->
     <main>
       <?php if (have_posts()) : ?>

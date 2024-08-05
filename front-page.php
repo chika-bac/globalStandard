@@ -40,7 +40,7 @@
   <!-- about -->
   <section class="about section">
   <div class="about__img-bg hidden-sp"></div>
-    <div class="about__inner">
+    <div class="about__inner inner">
       <div class="about__heading heading">
         <h2 class="heading__en">about us</h2>
         <p class="heading__ja">当社について</p>

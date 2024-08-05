@@ -13,3 +13,11 @@ layout > container
     padding-inline: 0;
   }
 }
+
+.inner{
+  @include mq(md) {
+    width: calc(1100px / 1280px * 100%);
+    margin-inline: auto;
+    max-width: 1350px;
+  }
+}

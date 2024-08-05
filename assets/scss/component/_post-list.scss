@@ -9,18 +9,31 @@ component > post-list
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @include mq(lg) {
+    gap: 16px;
+  }
 }
 
 .post__list-item {
   display: flex;
   flex-direction: row;
   gap: 12px;
+
+  @include mq(lg) {
+    gap: 10px;
+  }
 }
 
 .post__list-img {
   & img {
     width: 120px;
     aspect-ratio: 120/90;
+
+    @include mq(lg) {
+      width: clamp(5rem, 2.039rem + 5.26vw, 6.25rem); // 80px ~ 100px
+      aspect-ratio: 100/100;
+    }
   }
 }
 
@@ -31,6 +44,10 @@ component > post-list
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include mq(lg) {
+    flex-wrap: wrap;
+  }
 }
 .post__list-left {
   display: flex;
@@ -38,12 +55,22 @@ component > post-list
   align-items: center;
   color: #e61264;
   font-weight: 500;
+
+  @include mq(lg) {
+    gap: 4px;
+  }
 }
 
 .post__list-category {
   border: 1px solid #e61264;
   font-size: 12px;
   padding: 4px 12px;
+
+  &.side-post__category {
+    padding-top: clamp(0.125rem, -0.171rem + 0.53vw, 0.25rem); // 2px ~ 4px
+    padding-bottom: clamp(0.125rem, -0.171rem + 0.53vw, 0.25rem); // 2px ~ 4px
+    padding-inline: clamp(0.5rem, -0.092rem + 1.05vw, 0.75rem); // 8px ~ 12px
+  }
 }
 
 .new-label {
@@ -62,4 +89,8 @@ component > post-list
   line-height: 1.42;
   margin-top: 7px;
   line-height: 1.4;
+
+  @include mq(lg) {
+    margin-top: 4px;
+  }
 }

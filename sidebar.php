@@ -1,5 +1,5 @@
   <!-- sidebar -->
-  <aside>
+  <aside class="side-bar">
     <div class="side-post">
       <h2 class="side-post__title">新着記事</h2>
       <div class="side-post__list post__list">
@@ -20,7 +20,7 @@
               <div class="post__list-content">
                 <div class="post__list-meta">
                   <div class="post__list-left">
-                    <div class="post__list-category">
+                    <div class="post__list-category side-post__category">
                       <?php echo get_post_category(false); ?>
                     </div>
                     <?php echo attach_new_label(); ?>
@@ -37,7 +37,7 @@
       </div>
     </div>
     <div class="side-category">
-      <h2 class="side-category__title">カテゴリー</h2>
+      <h2 class="side-category__title">カテゴリ</h2>
       <ul class="side-category__list">
         <?php
         $categories = get_categories();

@@ -11,7 +11,7 @@
   </div>
 </div>
 <?php if (function_exists('bcn_display')) : ?>
-  <div class="bread-crumb">
+  <div class="bread-crumb inner">
     <?php bcn_display(); ?>
   </div>
 <?php endif; ?>
@@ -21,7 +21,7 @@
 <div class="container">
   <div class="container__inner inner">
     <!-- main -->
-    <main>
+    <main class="single-main">
       <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
           <article class="single__post single-post">

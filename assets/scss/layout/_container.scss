@@ -9,13 +9,13 @@ layout > container
   margin-inline: auto;
   padding-inline: 20px;
 
-  @include mq(md) {
+  @include mq(lg) {
     padding-inline: 0;
   }
 }
 
-.inner{
-  @include mq(md) {
+.inner {
+  @include mq(lg) {
     width: calc(1100px / 1280px * 100%);
     margin-inline: auto;
     max-width: 1350px;

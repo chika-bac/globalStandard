@@ -101,3 +101,31 @@ function get_sidebar_post($post_type, $posts_per_page, $orderby, $order)
   $new_posts = new WP_Query($args);
   return $new_posts;
 }
+
+/** ------------------------------------------
+ * 下層ページのメインタイトル出し分け
+ * ----------------------------------------**/
+function get_main_title()
+{
+  if (is_home() || is_single()) {
+    // 投稿一覧ページ・投稿詳細ページ
+    return array('en_title' => 'NEWS', 'ja_title' => 'ニュース');
+  } elseif (is_page('case_study')) {
+    // 導入事例ページ
+    return array('en_title' => 'CASE STUDY', 'ja_title' => '導入事例');
+  }
+}
+
+/** ------------------------------------------
+ * 下層ページのメイン画像用クラス出し分け
+ * ----------------------------------------**/
+function get_main_image_class()
+{
+  if (is_home() || is_single()) {
+    // 投稿一覧ページ・投稿詳細ページ
+    return 'lower-fv--news';
+  } elseif (is_page('case_study')) {
+    // 導入事例ページ
+    return 'lower-fv--case';
+  }
+}

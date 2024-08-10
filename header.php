@@ -100,11 +100,11 @@
       </div>
     </div>
   <?php else : ?>
-    <div class="lower-fv lower-fv--news">
+    <div class="lower-fv <?php echo get_main_image_class(); ?>">
       <div class="lower-fv__inner">
         <h2 class="lower-fv__title">
-          <span class="lower-fv__en">news</span>
-          <span class="lower-fv__ja">ニュース</span>
+          <span class="lower-fv__en"><?php echo get_main_title()['en_title']; ?></span>
+          <span class="lower-fv__ja"><?php echo get_main_title()['ja_title']; ?></span>
         </h2>
       </div>
     </div>

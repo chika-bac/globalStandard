@@ -1069,6 +1069,15 @@ layout > lower-fv
   }
 }
 
+.lower-fv--case {
+  background-image: url(../../assets/img/lower-fv-case_sp.png);
+}
+@media screen and (min-width: 900px) {
+  .lower-fv--case {
+    background-image: url(../../assets/img/lower-fv-case_pc.png);
+  }
+}
+
 .lower-fv__inner {
   position: relative;
   z-index: 1;
@@ -1108,6 +1117,7 @@ layout > lower-fv
   width: fit-content;
   background: var(--color-white);
   line-height: 1.2;
+  padding: 1px 3px;
 }
 .lower-fv__title span + span {
   margin-top: 8px;

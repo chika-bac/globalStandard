@@ -213,6 +213,13 @@ layout > lower-fv
     background-image: url(../../assets/img/lower-fv-news_pc.png);
   }
 }
+.lower-fv--case {
+  background-image: url(../../assets/img/lower-fv-case_sp.png);
+
+  @include mq(lg) {
+    background-image: url(../../assets/img/lower-fv-case_pc.png);
+  }
+}
 
 .lower-fv__inner {
   position: relative;
@@ -248,6 +255,7 @@ layout > lower-fv
     width: fit-content;
     background: var(--color-white);
     line-height: 1.2;
+    padding: 1px 3px;
 
     & + span {
       margin-top: 8px;

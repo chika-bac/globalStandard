@@ -37,6 +37,7 @@ component > button
   border: 1px solid currentColor;
 }
 
+// footerのボタン
 .button--more {
   font-family: var(--font-family-en);
   background: transparent;
@@ -63,7 +64,7 @@ component > button
   }
 
   &:after {
-    content: url(../../assets/img/icon-arrow.svg);
+    content: url(../../assets/img/icon-arrow--yellow.svg);
     position: absolute;
     right: 20px;
     top: 50%;
@@ -72,5 +73,23 @@ component > button
     @include mq(lg) {
       right: 29px;
     }
+  }
+}
+
+// 導入事例ページのボタン
+.button--arrow {
+  font-size: 14px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  text-align: center;
+  width: 295px;
+  position: relative;
+
+  &:after {
+    content: url(../../assets/img/icon-arrow--blue.svg);
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }

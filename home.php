@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 <!-- container -->
 <div class="container">
-  <div class="container__inner inner">
+  <div class="container__inner inner inner-sidebar">
     <main class="main">
       <h2 class="home-title">ニュース</h2>
       <div class="post__list">

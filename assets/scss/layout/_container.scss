@@ -25,10 +25,6 @@ layout > container
 }
 
 .container__inner {
-  @include mq(lg) {
-    display: flex;
-    gap: clamp(1.25rem, -1.711rem + 5.26vw, 2.5rem); // 20px ~ 40px
-  }
 }
 
 .inner {
@@ -39,5 +35,13 @@ layout > container
     margin-inline: auto;
     max-width: 1350px;
     padding-inline: 0;
+  }
+}
+
+// サイドバーがあるページのコンテナ
+.inner-sidebar {
+  @include mq(lg) {
+    display: flex;
+    gap: clamp(1.25rem, -1.711rem + 5.26vw, 2.5rem); // 20px ~ 40px
   }
 }

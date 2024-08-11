@@ -190,6 +190,12 @@ foundation > base
 */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+@media screen and (min-width: 900px) {
+  html {
+    scroll-padding-top: 100px;
+  }
 }
 html:has(dialog[open]) {
   overflow: hidden;
@@ -307,6 +313,14 @@ component > button
   width: 295px;
   position: relative;
 }
+@media screen and (min-width: 900px) {
+  .button--arrow {
+    font-size: 16px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    width: 336px;
+  }
+}
 .button--arrow:after {
   content: url(../../assets/img/icon-arrow--blue.svg);
   position: absolute;
@@ -314,6 +328,11 @@ component > button
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+@media screen and (min-width: 900px) {
+  .button--arrow:after {
+    right: 26px;
+  }
 }
 
 /*!
@@ -1380,15 +1399,6 @@ layout > container
   }
 }
 
-@media screen and (min-width: 900px) {
-  .container__inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: clamp(1.25rem, -1.711rem + 5.26vw, 2.5rem);
-  }
-}
-
 .inner {
   margin-inline: auto;
   padding-inline: clamp(1.25rem, 0.415rem + 3.71vw, 2.5rem);
@@ -1399,6 +1409,15 @@ layout > container
     margin-inline: auto;
     max-width: 1350px;
     padding-inline: 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .inner-sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: clamp(1.25rem, -1.711rem + 5.26vw, 2.5rem);
   }
 }
 
@@ -2097,7 +2116,7 @@ blockquote.wp-block-quote::before {
 }
 
 /*!
-fv
+page > case-study
 ------------------------------
 */
 .case__tabs-list {
@@ -2113,6 +2132,15 @@ fv
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (min-width: 900px) {
+  .case__tabs-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 16px;
+  }
+}
 
 .case__tab {
   width: 294px;
@@ -2122,6 +2150,12 @@ fv
   background: #eee;
   display: grid;
   place-content: center;
+  cursor: pointer;
+}
+@media screen and (min-width: 900px) {
+  .case__tab {
+    width: 208px;
+  }
 }
 
 .case__tab-link {
@@ -2133,9 +2167,25 @@ fv
 .case__section {
   margin-top: 62px;
 }
+@media screen and (min-width: 900px) {
+  .case__section {
+    margin-top: 80px;
+  }
+}
 
 .case__subtitle {
   position: relative;
+}
+@media screen and (min-width: 900px) {
+  .case__subtitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
 }
 .case__subtitle:before {
   content: "";
@@ -2158,6 +2208,11 @@ fv
   margin-left: 18px;
   line-height: 1.4;
 }
+@media screen and (min-width: 900px) {
+  .case__subtitle-ja {
+    font-size: 28px;
+  }
+}
 
 .case__subtitle-en {
   color: #023e78;
@@ -2167,12 +2222,26 @@ fv
   font-weight: 500;
   margin-left: 21px;
 }
+@media screen and (min-width: 900px) {
+  .case__subtitle-en {
+    font-size: 16px;
+    margin-left: 0;
+    line-height: 1.4;
+  }
+}
 
 .case__items {
   margin-top: 25px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 54px;
+}
+@media screen and (min-width: 900px) {
+  .case__items {
+    margin-top: 67px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 66px clamp(2.5rem, -3.421rem + 10.53vw, 5rem);
+  }
 }
 
 .case-item {
@@ -2183,8 +2252,8 @@ fv
 }
 
 .case-item__head {
-  border-radius: 12px 12px 0px 0px;
   background: #023e78;
+  border-radius: 12px 12px 0px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2195,16 +2264,35 @@ fv
       -ms-flex-align: center;
           align-items: center;
   padding: 6px 20px;
+  height: 100px;
+  overflow: visible;
+}
+@media screen and (min-width: 900px) {
+  .case-item__head {
+    padding: 0 20px 0 clamp(1.25rem, -1.711rem + 5.26vw, 2.5rem);
+  }
 }
 
 .case-item__title {
   color: #fff;
   line-height: 1.5;
 }
+@media screen and (min-width: 900px) {
+  .case-item__title {
+    line-height: 1.7;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
 
 .case-item__industry {
   font-size: 12px;
   font-weight: 700;
+}
+@media screen and (min-width: 900px) {
+  .case-item__industry {
+    font-size: 14px;
+  }
 }
 
 .case-item__name {
@@ -2218,6 +2306,13 @@ fv
           align-items: center;
   gap: 12px;
   font-weight: 700;
+}
+@media screen and (min-width: 900px) {
+  .case-item__name {
+    font-size: 24px;
+    gap: clamp(0.375rem, -1.105rem + 2.63vw, 1rem);
+    margin-top: clamp(0rem, -1.184rem + 2.11vw, 0.5rem);
+  }
 }
 
 .case-item__img {
@@ -2238,15 +2333,32 @@ fv
           align-items: center;
   overflow: hidden;
 }
+@media screen and (min-width: 900px) {
+  .case-item__img {
+    width: clamp(8.125rem, 3.684rem + 7.89vw, 10rem);
+    height: clamp(6.5rem, 5.316rem + 2.11vw, 7rem);
+  }
+}
 .case-item__img img {
   width: 66%;
-  height: auto;
+}
+@media screen and (min-width: 900px) {
+  .case-item__img img {
+    width: 60%;
+  }
 }
 
 .case-item__body {
   padding-inline: 20px;
   margin-top: 20px;
   margin-bottom: 18px;
+}
+@media screen and (min-width: 900px) {
+  .case-item__body {
+    padding-inline: clamp(1.25rem, -1.711rem + 5.26vw, 2.5rem);
+    margin-top: clamp(2rem, 0.668rem + 2.37vw, 2.563rem);
+    margin-bottom: 38px;
+  }
 }
 
 .case-item__body-title {
@@ -2260,6 +2372,12 @@ fv
   font-size: 16px;
   font-weight: 700;
   position: relative;
+  white-space: nowrap;
+}
+@media screen and (min-width: 900px) {
+  .case-item__body-title {
+    gap: 9px;
+  }
 }
 .case-item__body-title:after {
   content: "";
@@ -2274,6 +2392,11 @@ fv
 .case-item__text {
   margin-top: 31px;
 }
+@media screen and (min-width: 900px) {
+  .case-item__text {
+    margin-top: 41px;
+  }
+}
 
 .case-item__body-head {
   font-size: 16px;
@@ -2286,11 +2409,25 @@ fv
           align-items: center;
   gap: 9.5px;
 }
+@media screen and (min-width: 900px) {
+  .case-item__body-head {
+    font-size: 18px;
+    gap: 10px;
+  }
+}
 .case-item__body-head:not(:first-child) {
   margin-top: 30px;
 }
 .case-item__body-head svg {
   fill: #e61264;
+  width: 16px;
+  height: 16px;
+}
+@media screen and (min-width: 900px) {
+  .case-item__body-head svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .case-item__content {
@@ -2298,8 +2435,18 @@ fv
   font-size: 14px;
   font-weight: 500;
 }
+@media screen and (min-width: 900px) {
+  .case-item__content {
+    margin-top: 7px;
+  }
+}
 
 .case__button {
   margin-top: 40px;
   text-align: center;
+}
+@media screen and (min-width: 900px) {
+  .case__button {
+    margin-top: 60px;
+  }
 }/*# sourceMappingURL=style.css.map */

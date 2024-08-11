@@ -1,7 +1,7 @@
 @use "../global" as *;
 
 /*!
-fv
+page > case-study
 ------------------------------
 */
 .case__tabs {
@@ -12,6 +12,11 @@ fv
   flex-direction: column;
   gap: 20px;
   align-items: center;
+
+  @include mq(lg) {
+    flex-direction: row;
+    gap: 16px;
+  }
 }
 
 .case__tab {
@@ -22,6 +27,11 @@ fv
   background: #eee;
   display: grid;
   place-content: center;
+  cursor: pointer;
+
+  @include mq(lg) {
+    width: 208px;
+  }
 }
 
 .case__tab-link {
@@ -35,6 +45,10 @@ fv
 
 .case__section {
   margin-top: 62px;
+
+  @include mq(lg) {
+    margin-top: 80px;
+  }
 }
 
 .case__section-inner {
@@ -42,6 +56,12 @@ fv
 
 .case__subtitle {
   position: relative;
+
+  @include mq(lg) {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
 
   &:before {
     content: "";
@@ -64,6 +84,10 @@ fv
   font-weight: 700;
   margin-left: calc(10px + 8px);
   line-height: 1.4;
+
+  @include mq(lg) {
+    font-size: 28px;
+  }
 }
 .case__subtitle-en {
   color: #023e78;
@@ -72,6 +96,12 @@ fv
   font-style: italic;
   font-weight: 500;
   margin-left: calc(13px + 8px);
+
+  @include mq(lg) {
+    font-size: 16px;
+    margin-left: 0;
+    line-height: 1.4;
+  }
 }
 
 .case__items {
@@ -79,6 +109,12 @@ fv
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 54px;
+
+  @include mq(lg) {
+    margin-top: 67px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 66px clamp(2.5rem, -3.421rem + 10.53vw, 5rem); // 40px ~ 80px
+  }
 }
 
 .case__item {
@@ -91,23 +127,38 @@ fv
 }
 
 .case-item__head {
-  border-radius: 12px 12px 0px 0px;
   background: #023e78;
+  border-radius: 12px 12px 0px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 6px 20px;
+
+  @include mq(lg) {
+    padding: 0 20px 0 clamp(1.25rem, -1.711rem + 5.26vw, 2.5rem); // 20px ~ 40px
+  }
+  height: 100px;
+  overflow: visible;
 }
 
 .case-item__title {
   color: #fff;
-
   line-height: 1.5;
+
+  @include mq(lg) {
+    line-height: 1.7;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
 }
 
 .case-item__industry {
   font-size: 12px;
   font-weight: 700;
+
+  @include mq(lg) {
+    font-size: 14px;
+  }
 }
 
 .case-item__name {
@@ -117,6 +168,12 @@ fv
   align-items: center;
   gap: 12px;
   font-weight: 700;
+
+  @include mq(lg) {
+    font-size: 24px;
+    gap: clamp(0.375rem, -1.105rem + 2.63vw, 1rem); // 6px ~ 16px
+    margin-top: clamp(0rem, -1.184rem + 2.11vw, 0.5rem); // 0px ~ 8px
+  }
 }
 
 .case-item__img {
@@ -130,9 +187,17 @@ fv
   align-items: center;
   overflow: hidden;
 
+  @include mq(lg) {
+    width: clamp(8.125rem, 3.684rem + 7.89vw, 10rem); // 130px ~ 160px
+    height: clamp(6.5rem, 5.316rem + 2.11vw, 7rem); // 104px ~ 112px
+  }
+
   & img {
     width: 66%;
-    height: auto;
+
+    @include mq(lg) {
+      width: 60%;
+    }
   }
 }
 
@@ -140,6 +205,12 @@ fv
   padding-inline: 20px;
   margin-top: 20px;
   margin-bottom: 18px;
+
+  @include mq(lg) {
+    padding-inline: clamp(1.25rem, -1.711rem + 5.26vw, 2.5rem); // 20px ~ 40px
+    margin-top: clamp(2rem, 0.668rem + 2.37vw, 2.563rem); // 32px ~ 41px
+    margin-bottom: 38px;
+  }
 }
 
 .case-item__body-title {
@@ -149,6 +220,11 @@ fv
   font-size: 16px;
   font-weight: 700;
   position: relative;
+  white-space: nowrap;
+
+  @include mq(lg) {
+    gap: 9px;
+  }
 
   &:after {
     content: "";
@@ -163,6 +239,10 @@ fv
 
 .case-item__text {
   margin-top: calc(22px + 9px);
+
+  @include mq(lg) {
+    margin-top: calc(32px + 9px);
+  }
 }
 
 .case-item__body-head {
@@ -172,12 +252,24 @@ fv
   align-items: center;
   gap: 9.5px;
 
+  @include mq(lg) {
+    font-size: 18px;
+    gap: 10px;
+  }
+
   &:not(:first-child) {
     margin-top: 30px;
   }
 
   & svg {
     fill: #e61264;
+    width: 16px;
+    height: 16px;
+
+    @include mq(lg) {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 
@@ -185,9 +277,17 @@ fv
   margin-top: 6px;
   font-size: 14px;
   font-weight: 500;
+
+  @include mq(lg) {
+    margin-top: 7px;
+  }
 }
 
 .case__button {
   margin-top: 40px;
   text-align: center;
+
+  @include mq(lg) {
+    margin-top: 60px;
+  }
 }

@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 <!-- container -->
 <div class="container">
-  <div class="container__inner inner">
+  <div class="container__inner inner inner-sidebar">
     <!-- main -->
     <main class="single-main">
       <?php if (have_posts()) : ?>

@@ -9,11 +9,11 @@ foundation > base
 html {
   scroll-behavior: smooth;
   // 移動先がヘッダーの後ろになるのを防止するためヘッダーの高さを考慮
-  // scroll-padding-top: 60px;
+  scroll-padding-top: 60px;
 
-  // @include mq(md) {
-  //   scroll-padding-top: 70px;
-  // }
+  @include mq(lg) {
+    scroll-padding-top: 100px;
+  }
 
   // モーダルopen時に背景をスクロールさせない
   &:has(dialog[open]) {

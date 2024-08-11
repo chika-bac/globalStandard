@@ -103,6 +103,26 @@ function get_sidebar_post($post_type, $posts_per_page, $orderby, $order)
 }
 
 /** ------------------------------------------
+ * コンテンツを取得（導入事例）
+ * ----------------------------------------**/
+function get_specific_contents($post_type, $posts_per_page = -1, $taxonomy = null, $term = null)
+{
+  $args = array(
+    'post_type' => $post_type,
+    'posts_per_page' => $posts_per_page,
+    'tax_query' => array(
+      array(
+        'taxonomy' => $taxonomy,
+        'field' => 'slug',
+        'terms' => $term
+      )
+    )
+  );
+
+  return new WP_Query($args);
+}
+
+/** ------------------------------------------
  * 下層ページのメインタイトル出し分け
  * ----------------------------------------**/
 function get_main_title()

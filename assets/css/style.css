@@ -1114,6 +1114,15 @@ layout > lower-fv
   }
 }
 
+.lower-fv--about {
+  background-image: url(../../assets/img/lower-fv-about_sp.png);
+}
+@media screen and (min-width: 900px) {
+  .lower-fv--about {
+    background-image: url(../../assets/img/lower-fv-about_pc.png);
+  }
+}
+
 .lower-fv__inner {
   position: relative;
   z-index: 1;
@@ -2115,6 +2124,10 @@ blockquote.wp-block-quote::before {
   }
 }
 
+/*!
+page > about > mission
+------------------------------
+*/
 /*!
 page > case-study
 ------------------------------

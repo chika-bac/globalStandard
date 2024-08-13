@@ -13,12 +13,12 @@ get_header();
       foreach ($missions as $mission) :
         if (have_rows($mission)) :
           while (have_rows($mission)) : the_row(); ?>
-            <div class="mission__item mission-<?php ?>">
+            <div class="mission__item">
               <div class="mission__inner">
-                <h3 class="mission__title">
-                  <span class="mission__title-en"><?php the_sub_field('en_msg'); ?></span>
-                  <span class="mission__title-en"><?php the_sub_field('ja-msg'); ?></span>
-                </h3>
+                <div class="mission__title <?php echo $mission; ?>">
+                  <p class="mission__title-en"><?php the_sub_field('en_msg'); ?></p>
+                  <p class="mission__title-jp"><?php the_sub_field('jp_msg'); ?></p>
+                </div>
                 <div class="mission__text">
                   <p class="mission__head"><?php the_sub_field('header_msg'); ?></p>
                   <p class="mission__body"><?php the_sub_field('msg_body'); ?></p>

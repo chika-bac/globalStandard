@@ -133,7 +133,7 @@ function get_main_title()
   } elseif (is_page('case_study')) {
     // 導入事例ページ
     return array('en_title' => 'CASE STUDY', 'ja_title' => '導入事例');
-  }elseif (is_page('about')) {
+  } elseif (is_page('about')) {
     // 当社についてページ
     return array('en_title' => 'ABOUT US', 'ja_title' => '当社について');
   }
@@ -150,8 +150,13 @@ function get_main_image_class()
   } elseif (is_page('case_study')) {
     // 導入事例ページ
     return 'lower-fv--case';
-  }elseif(is_page('about')){
+  } elseif (is_page('about')) {
     // 当社についてページ
     return 'lower-fv--about';
   }
 }
+
+/** ------------------------------------------
+ * 画像サイズを指定
+ * ----------------------------------------**/
+add_image_size('member', 480, 640, false);

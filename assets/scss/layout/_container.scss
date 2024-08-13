@@ -15,12 +15,12 @@ layout > container
 
 .container {
   margin-top: 60px;
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
   margin-inline: auto;
 
   @include mq(lg) {
     margin-top: 80px;
-    margin-bottom: 175px;
+    // margin-bottom: 175px;
   }
 }
 

@@ -8,6 +8,7 @@ single
 .single-main {
   @include mq(lg) {
     width: 70%;
+    margin-bottom: 175px;
   }
 }
 

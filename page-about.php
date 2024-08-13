@@ -67,6 +67,7 @@ get_header();
       </div>
     </section>
     <section class="members">
+    <div class="members__bg"></div>
       <div class="members__inner">
         <h3 class="members__title">役員紹介</h3>
         <div class="members__content">
@@ -83,7 +84,7 @@ get_header();
                   <div class="member__img">
                     <?php
                     $img_id = get_field('member_img');
-                    echo wp_get_attachment_image($img_id); ?>
+                    echo wp_get_attachment_image($img_id, 'member'); ?>
                   </div>
                   <div class="member__text">
                     <p class="member__head">
@@ -104,6 +105,7 @@ get_header();
           </ul>
         </div>
       </div>
+     
     </section>
   </div>
 </div>

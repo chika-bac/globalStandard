@@ -41,6 +41,11 @@ page > case-study
 }
 
 .case__container {
+  margin-bottom: 100px;
+
+  @include mq(lg) {
+    margin-bottom: 175px;
+  }
 }
 
 .case__section {

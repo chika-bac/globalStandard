@@ -2140,14 +2140,30 @@ page > about > mission
 .mission {
   margin-bottom: 278px;
 }
+@media screen and (min-width: 768px) {
+  .mission {
+    margin-bottom: 296px;
+  }
+}
 
 .mission__item + .mission__item {
   margin-top: 254px;
+}
+@media screen and (min-width: 768px) {
+  .mission__item + .mission__item {
+    margin-top: 260px;
+  }
 }
 
 .mission__inner {
   position: relative;
   z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .mission__title {
@@ -2161,6 +2177,11 @@ page > about > mission
   padding-top: 20px;
   position: relative;
   z-index: 0;
+}
+@media screen and (min-width: 768px) {
+  .mission__title {
+    height: 353px;
+  }
 }
 .mission__title::before {
   content: "";
@@ -2209,10 +2230,20 @@ page > about > mission
   font-style: italic;
   font-weight: 500;
 }
+@media screen and (min-width: 768px) {
+  .mission__title-en {
+    font-size: 100px;
+  }
+}
 
 .mission__title-jp {
   font-size: 16px;
   font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .mission__title-jp {
+    font-size: 24px;
+  }
 }
 
 .mission__text {
@@ -2224,6 +2255,14 @@ page > about > mission
   z-index: 1;
   top: 241px;
 }
+@media screen and (min-width: 768px) {
+  .mission__text {
+    width: clamp(38.563rem, 31.906rem + 13.87vw, 43rem);
+    padding: 32px 40px 30px 40px;
+    top: 293px;
+    margin: 0 auto;
+  }
+}
 
 .mission__head {
   color: #023e78;
@@ -2231,11 +2270,22 @@ page > about > mission
   font-size: 20px;
   font-weight: 700;
 }
+@media screen and (min-width: 768px) {
+  .mission__head {
+    font-size: 24px;
+  }
+}
 
 .mission__body {
   font-size: 14px;
   font-weight: 500;
   margin-top: 18px;
+}
+@media screen and (min-width: 768px) {
+  .mission__body {
+    font-size: 14px;
+    margin-top: 31px;
+  }
 }
 
 .company {
@@ -2244,11 +2294,26 @@ page > about > mission
   width: 100vw;
   padding: 60px 20px;
 }
+@media screen and (min-width: 768px) {
+  .company {
+    background-image: url(../../assets/img/about-company-bg_pc.png);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-inline: 0;
+  }
+}
 
 .company__inner {
   border: 1px solid #707070;
   background: #fff;
   padding: 40px 20px;
+}
+@media screen and (min-width: 768px) {
+  .company__inner {
+    width: clamp(43.125rem, 35.813rem + 15.23vw, 48rem);
+    margin: 0 auto;
+    padding: 60px 40px 80px 40px;
+  }
 }
 
 .company__title {
@@ -2260,6 +2325,11 @@ page > about > mission
 .company__content {
   margin-top: 40px;
 }
+@media screen and (min-width: 768px) {
+  .company__content {
+    margin-top: 60px;
+  }
+}
 
 .company__table td, .company__table th {
   padding-top: 16px;
@@ -2267,15 +2337,33 @@ page > about > mission
   font-size: 14px;
   font-weight: 500;
 }
+@media screen and (min-width: 768px) {
+  .company__table td, .company__table th {
+    padding-top: 25px;
+    padding-bottom: 24px;
+    font-size: 16px;
+  }
+}
 .company__table th {
   border-bottom: 1px solid #023e78;
   border-top: 1px solid #023e78;
   width: 29.8507462687%;
+  white-space: nowrap;
+}
+@media screen and (min-width: 768px) {
+  .company__table th {
+    padding-left: 32px;
+  }
 }
 .company__table td {
   border-bottom: 1px solid #e8eaec;
   border-top: 1px solid #e8eaec;
   padding-left: 20px;
+}
+@media screen and (min-width: 768px) {
+  .company__table td {
+    padding-left: 36px;
+  }
 }
 
 .members {
@@ -2284,6 +2372,12 @@ page > about > mission
   z-index: 1;
   margin-bottom: 160px;
   padding-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .members {
+    padding-top: 120px;
+    margin-bottom: 187px;
+  }
 }
 
 .members__bg {
@@ -2296,6 +2390,12 @@ page > about > mission
   left: 0;
   z-index: -1;
 }
+@media screen and (min-width: 768px) {
+  .members__bg {
+    height: 100%;
+    bottom: -326px;
+  }
+}
 
 .members__title {
   text-align: center;
@@ -2305,6 +2405,11 @@ page > about > mission
 
 .members__content {
   margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .members__content {
+    margin-top: 60px;
+  }
 }
 
 .members__list {
@@ -2318,6 +2423,21 @@ page > about > mission
   gap: 60px;
 }
 
+@media screen and (min-width: 768px) {
+  .member {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    gap: 40px;
+    max-width: 688px;
+    margin-inline: auto;
+  }
+}
+
 .member__img {
   text-align: center;
 }
@@ -2328,6 +2448,11 @@ page > about > mission
 
 .member__text {
   margin-top: 22px;
+}
+@media screen and (min-width: 768px) {
+  .member__text {
+    margin-top: 0;
+  }
 }
 
 .member__head {
@@ -2354,6 +2479,11 @@ page > about > mission
   font-size: 14px;
   font-weight: 500;
 }
+@media screen and (min-width: 768px) {
+  .member__history {
+    margin-top: 30px;
+  }
+}
 
 .member__sns {
   margin-top: 20px;
@@ -2368,6 +2498,11 @@ page > about > mission
       -ms-flex-align: center;
           align-items: center;
   gap: 28px;
+}
+@media screen and (min-width: 768px) {
+  .member__sns {
+    margin-top: 30px;
+  }
 }
 .member__sns i {
   font-size: 28px;

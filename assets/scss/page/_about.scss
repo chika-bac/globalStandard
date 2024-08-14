@@ -9,17 +9,29 @@ page > about > mission
 
 .mission {
   margin-bottom: 278px;
+
+  @include mq(md) {
+    margin-bottom: 296px;
+  }
 }
 
 .mission__item {
   & + & {
     margin-top: 254px;
+
+    @include mq(md) {
+      margin-top: 260px;
+    }
   }
 }
 
 .mission__inner {
   position: relative;
   z-index: 0;
+
+  // mission__textを左右中央に配置
+  display: flex;
+  justify-content: center;
 }
 
 .mission__title {
@@ -34,6 +46,10 @@ page > about > mission
   padding-top: 20px;
   position: relative;
   z-index: 0;
+
+  @include mq(md) {
+    height: 353px;
+  }
 
   &::before {
     content: "";
@@ -81,11 +97,19 @@ page > about > mission
   font-size: 52px;
   font-style: italic;
   font-weight: 500;
+
+  @include mq(md) {
+    font-size: 100px;
+  }
 }
 
 .mission__title-jp {
   font-size: 16px;
   font-weight: 700;
+
+  @include mq(md) {
+    font-size: 24px;
+  }
 }
 
 .mission__text {
@@ -95,6 +119,14 @@ page > about > mission
   position: absolute;
   z-index: 1;
   top: 241px;
+
+  @include mq(md) {
+    width: clamp(38.563rem, 31.906rem + 13.87vw, 43rem); // 617px ~ 688px
+    padding: 32px 40px 30px 40px;
+    top: 293px;
+
+    margin: 0 auto;
+  }
 }
 
 .mission__head {
@@ -102,12 +134,21 @@ page > about > mission
   text-align: center;
   font-size: 20px;
   font-weight: 700;
+
+  @include mq(md) {
+    font-size: 24px;
+  }
 }
 
 .mission__body {
   font-size: 14px;
   font-weight: 500;
   margin-top: 18px;
+
+  @include mq(md) {
+    font-size: 14px;
+    margin-top: 31px;
+  }
 }
 
 .about__company {
@@ -118,12 +159,25 @@ page > about > mission
   margin: 0 calc(50% - 50vw);
   width: 100vw;
   padding: 60px 20px;
+
+  @include mq(md) {
+    background-image: url(../../assets/img/about-company-bg_pc.png);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-inline: 0;
+  }
 }
 
 .company__inner {
   border: 1px solid #707070;
   background: #fff;
   padding: 40px 20px;
+
+  @include mq(md) {
+    width: clamp(43.125rem, 35.813rem + 15.23vw, 48rem); // 690px ~ 768px
+    margin: 0 auto;
+    padding: 60px 40px 80px 40px;
+  }
 }
 
 .company__title {
@@ -134,6 +188,10 @@ page > about > mission
 
 .company__content {
   margin-top: 40px;
+
+  @include mq(md) {
+    margin-top: 60px;
+  }
 }
 
 .company__table {
@@ -143,17 +201,32 @@ page > about > mission
     padding-bottom: 16px;
     font-size: 14px;
     font-weight: 500;
+
+    @include mq(md) {
+      padding-top: 25px;
+      padding-bottom: 24px;
+      font-size: 16px;
+    }
   }
   & th {
     border-bottom: 1px solid #023e78;
     border-top: 1px solid #023e78;
     width: calc(100px / 335px * 100%);
+    white-space: nowrap;
+
+    @include mq(md) {
+      padding-left: 32px;
+    }
   }
 
   & td {
     border-bottom: 1px solid #e8eaec;
     border-top: 1px solid #e8eaec;
     padding-left: 20px;
+
+    @include mq(md) {
+      padding-left: 36px;
+    }
   }
 }
 
@@ -163,6 +236,11 @@ page > about > mission
   z-index: 1;
   margin-bottom: 160px;
   padding-bottom: 20px;
+
+  @include mq(md) {
+    padding-top: 120px;
+    margin-bottom: 187px;
+  }
 }
 
 .members__bg {
@@ -174,6 +252,11 @@ page > about > mission
   bottom: -300px;
   left: 0;
   z-index: -1;
+
+  @include mq(md) {
+    height: 100%;
+    bottom: -326px;
+  }
 }
 
 .members__inner {
@@ -187,6 +270,10 @@ page > about > mission
 
 .members__content {
   margin-top: 40px;
+
+  @include mq(md) {
+    margin-top: 60px;
+  }
 }
 
 .members__list {
@@ -199,6 +286,13 @@ page > about > mission
 }
 
 .member {
+  @include mq(md) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+    max-width: 688px;
+    margin-inline: auto;
+  }
 }
 
 .member__img {
@@ -211,6 +305,10 @@ page > about > mission
 
 .member__text {
   margin-top: 22px;
+
+  @include mq(md) {
+    margin-top: 0;
+  }
 }
 
 .member__head {
@@ -232,6 +330,10 @@ page > about > mission
   margin-top: 22px;
   font-size: 14px;
   font-weight: 500;
+
+  @include mq(md) {
+    margin-top: 30px;
+  }
 }
 
 .member__sns {
@@ -240,6 +342,10 @@ page > about > mission
   flex-direction: row;
   align-items: center;
   gap: 28px;
+
+  @include mq(md) {
+    margin-top: 30px;
+  }
 
   & i {
     font-size: 28px;

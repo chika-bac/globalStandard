@@ -229,6 +229,14 @@ layout > lower-fv
   }
 }
 
+.lower-fv--service {
+  background-image: url(../../assets/img/lower-fv-service_sp.png);
+
+  @include mq(lg) {
+    background-image: url(../../assets/img/lower-fv-service_pc.png);
+  }
+}
+
 .lower-fv__inner {
   position: relative;
   z-index: 1;

@@ -105,7 +105,6 @@ get_header();
           </ul>
         </div>
       </div>
-     
     </section>
   </div>
 </div>

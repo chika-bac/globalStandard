@@ -136,6 +136,9 @@ function get_main_title()
   } elseif (is_page('about')) {
     // 当社についてページ
     return array('en_title' => 'ABOUT US', 'ja_title' => '当社について');
+  } elseif (is_page('service')) {
+    // サービスページ
+    return array('en_title' => 'SERVICE', 'ja_title' => 'サービス');
   }
 }
 
@@ -153,6 +156,9 @@ function get_main_image_class()
   } elseif (is_page('about')) {
     // 当社についてページ
     return 'lower-fv--about';
+  } elseif (is_page('service')) {
+    // サービスページ
+    return 'lower-fv--service';
   }
 }
 
@@ -160,3 +166,4 @@ function get_main_image_class()
  * 画像サイズを指定
  * ----------------------------------------**/
 add_image_size('member', 480, 640, false);
+add_image_size('program', 1120, 1792, false);

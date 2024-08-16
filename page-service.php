@@ -120,7 +120,7 @@ get_header();
             $qa = new WP_Query($args);
 if ($qa->have_posts()) : ?>
 <?php while ($qa->have_posts()) : $qa->the_post(); ?>
-<details class="qa__box js-details is-open" open>
+<details class="qa__box js-details">
               <summary class="qa__summary js-summary">
                 <span class="qa__summary-text"><?php the_title(); ?></span>
                 <span class="qa__summary-button"></span>

@@ -5,68 +5,61 @@ page > service > service
 ------------------------------
 */
 .service__program {
-
 }
 
 .program {
-
 }
 
 .program__inner {
-
 }
 
 .program__title {
   text-align: center;
-font-size: 20px;
-font-weight: 700;
-line-height: 1.4;
-
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .program__content {
   margin-top: 60px;
-
 }
 
 .program__item {
   & + & {
     margin-top: 231px;
   }
-
 }
 
 .program__img {
   width: 100vw;
   z-index: 1;
-  & img{
+  & img {
     position: absolute;
-  right: 0;
+    right: 0;
     width: 188px;
-aspect-ratio: 188/301;
+    aspect-ratio: 188/301;
   }
 }
 
-.service__program_2{
-  & .program__img{
-    & img{
+.service__program_2 {
+  & .program__img {
+    & img {
       left: 0;
     }
   }
 
-  & .program__num{
+  & .program__num {
     right: 0;
   }
 }
 
 .program__text {
-  background: rgba(255, 255, 255, 0.90);
-box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.16);
-position: relative;
-z-index: 2;
-top: 153px;
-padding: 40px 20px;
-
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.16);
+  position: relative;
+  z-index: 2;
+  top: 153px;
+  padding: 40px 20px;
 }
 
 .program__head {
@@ -75,75 +68,66 @@ padding: 40px 20px;
 
 .program__num {
   position: absolute;
-top: -82px;
-& img{
-  width: 72px;
-}
-
+  top: -82px;
+  & img {
+    width: 72px;
+  }
 }
 
 .program__title-jp {
-font-size: 28px;
-font-weight: 700;
-line-height: 1.4;
-
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .program__title-en {
-  color: #023E78;
-font-family: var(--font-family-en);
-font-size: 14px;
-font-style: italic;
-font-weight: 500;
-
+  color: #023e78;
+  font-family: var(--font-family-en);
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 500;
 }
 
 .program__detail {
   margin-top: 31px;
-font-size: 14px;
-font-weight: 500;
-
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .program__data {
   margin-top: 30px;
-
 }
 
 .program__table {
-  & tr{
-    border-bottom: 1px solid #CCC;
-    border-top: 1px solid #CCC;
+  & tr {
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
     font-size: 14px;
   }
 
-  & th{
+  & th {
     font-weight: 700;
     padding-right: 52px;
     white-space: nowrap;
     padding-top: 18px;
     padding-bottom: 18px;
-}
+  }
 
-  & td{
+  & td {
     font-weight: 500;
-}
-
+  }
 }
 
 .program__button {
   margin-top: 32px;
   text-align: center;
-
 }
-
 
 /*!
 page > service > flow
 ------------------------------
 */
 .service__flow {
-
 }
 
 .flow {
@@ -163,150 +147,192 @@ page > service > flow
 
 .flow__inner {
   // margin-top: 60px;
-
 }
 
 .flow__title {
-  color: #FFF;
-text-align: center;
-font-size: 24px;
-font-weight: 700;
-
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .flow__content {
   margin-top: 40px;
-
 }
 
 .flow__item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 17px;
+  // display: flex;
+  // flex-direction: row;
+  // align-items: center;
+  // gap: 17px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  position: relative;
 }
 
 .flow__step {
-  color: #FFF400;
+  color: #fff400;
   text-transform: uppercase;
   font-family: var(--font-family-en);
   font-style: italic;
-font-weight: 500;
-line-height: 1.2;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .flow__step-en {
-font-size: 20px;
+  font-size: 20px;
 }
 
 .flow__step-num {
-font-size: 40px;
+  font-size: 40px;
 }
 
 .flow__text {
-  padding: 20px 20px;
-  max-width: 480px;
-
 }
 
-.flow__text-1{
-  background: #EDF3F8;
+.flow__text-1 {
+  // background: #EDF3F8;
+  // background-image: url(../../assets/img/service-flow-bg1_sp.png);
 }
-.flow__text-2{
-  background: #DDE8F0;
-
+.flow__text-2 {
+  // background: #DDE8F0;
+  // background-image: url(../../assets/img/service-flow-bg2_sp.png);
 }
-.flow__text-3{
-background: #C7DBE9;
+.flow__text-3 {
+  // background: #C7DBE9;
+  // background-image: url(../../assets/img/service-flow-bg3_sp.png);
 }
-.flow__text-4{
-background: #B0D0E5;
+.flow__text-4 {
+  // background: #B0D0E5;
+  // background-image: url(../../assets/img/service-flow-bg4_sp.png);
 }
 
 .flow__head {
-  color: #023E78;
-text-align: center;
-font-size: 18px;
-font-weight: 700;
-
+  color: #023e78;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .flow__body {
-
+  & span {
+    display: block;
+  }
 }
 
 .flow__body--pink {
-
+  color: #e61264;
 }
-
 
 /*!
 page > service > qa
 ------------------------------
 */
 .service__qa {
-
 }
 
 .qa {
-
+  margin-top: 60px;
+  margin-bottom: 100px;
 }
 
 .qa__inner {
-
 }
 
 .qa__title {
-
-
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .qa__content {
-
+  margin-top: 56px;
 }
 
 .qa__box {
-
-}
-
-.js-details {
-
-}
-
-.is-open {
-
+  border-bottom: 1px solid #ddd;
 }
 
 .qa__summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 41px;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  cursor: pointer;
 
-}
-
-.js-summary {
-
+  // safari用
+  &::-webkit-details-marker {
+    display: none;
+  }
 }
 
 .qa__summary-text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
 
+  .qa__box.is-open & {
+    color: #e61264;
+  }
 }
 
 .qa__summary-button {
+  width: 21px;
+  height: 21px;
+  position: relative;
+  // margin-left: auto;
+  display: block;
 
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    // width: 100%;
+    width: 21px;
+    height: 2px;
+    background: #1a1a1a;
+    transform: translate(-50%, -50%);
+
+    .qa__box.is-open & {
+      background: #e61264;
+    }
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(90deg);
+    transition: transform 0.3s;
+
+    // QAが開いている時
+    .qa__box.is-open & {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+
+  &::after {
+    // QAが開いている時
+    .qa__box.is-open & {
+      transform: translate(-50%, -50%) rotate(135deg);
+    }
+  }
 }
 
 .qa__answer {
-
-}
-
-.js-content {
-
 }
 
 .qa__answer-inner {
-
+  padding-top: 18px;
+  padding-bottom: 19px;
 }
 
 .qa__answer-text {
-
+  font-size: 14px;
+  font-weight: 500;
 }
-

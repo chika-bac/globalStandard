@@ -10,16 +10,16 @@ get_header();
     <!-- program -->
     <section class="service__program program">
       <div class="program__inner">
-        <h3 class="program__title">世界で活躍できる<br>グローバルな人材を育てる<br>３つの研修プログラム</h3>
+        <h3 class="program__title">世界で活躍できる<br>グローバルな人材を育てる<br class="hidden-pc">３つの研修プログラム</h3>
         <div class="program__content">
           <?php $services = array('program_1', 'program_2', 'program_3');
           foreach ($services as $index => $service) :
             $program_num = sprintf('%02d', $index + 1);
             if (have_rows($service)) :
               while (have_rows($service)) : the_row();
-              $program_class = ($service == 'program_2') ? 'service__program_2' : '';
-              ?>
-              <!-- .program__item -->
+                $program_class = ($service == 'program_2') ? 'service__program_2' : '';
+          ?>
+                <!-- .program__item -->
                 <div class="program__item  <?php echo $program_class; ?>">
                   <div class="program__img">
                     <?php $image_id = get_sub_field('program_img');
@@ -38,8 +38,8 @@ get_header();
                           <th>対象</th>
                           <td><?php the_sub_field('program_target'); ?></td>
                         </tr>
-                          <th>費用</th>
-                          <td><?php the_sub_field('program_price'); ?></td>
+                        <th>費用</th>
+                        <td><?php the_sub_field('program_price'); ?></td>
                         </tr>
                       </table>
                     </div>
@@ -100,7 +100,8 @@ get_header();
               <p class="flow__head">研修開始</p>
               <p class="flow__body">
                 <span>研修当日はお約束のお時間の30分前に講師が伺います。</span>
-                <span class="flow__body--pink">※キャンセルのご連絡は2日前までにお願いいたします</span></p>
+                <span class="flow__body--pink">※キャンセルのご連絡は2日前までにお願いいたします</span>
+              </p>
             </div>
           </div>
         </div>
@@ -109,34 +110,34 @@ get_header();
     <!-- end flow -->
     <!-- faq -->
     <section class="service__qa qa">
-    <div class="qa__inner">
-          <h3 class="qa__title">よくあるご質問</h3>
-          <div class="qa__content">
+      <div class="qa__inner">
+        <h3 class="qa__title">よくあるご質問</h3>
+        <div class="qa__content">
           <?php
-            $args = array(
-              'post_type' => 'qa',
-              'posts_per_page' => -1,
-            );
-            $qa = new WP_Query($args);
-if ($qa->have_posts()) : ?>
-<?php while ($qa->have_posts()) : $qa->the_post(); ?>
-<details class="qa__box js-details">
-              <summary class="qa__summary js-summary">
-                <span class="qa__summary-text"><?php the_title(); ?></span>
-                <span class="qa__summary-button"></span>
-              </summary>
-              <div class="qa__answer js-content">
-                <div class="qa__answer-inner">
-                  <span class="qa__answer-text">
-                    <?php the_content(); ?></span>
+          $args = array(
+            'post_type' => 'qa',
+            'posts_per_page' => -1,
+          );
+          $qa = new WP_Query($args);
+          if ($qa->have_posts()) : ?>
+            <?php while ($qa->have_posts()) : $qa->the_post(); ?>
+              <details class="qa__box js-details">
+                <summary class="qa__summary js-summary">
+                  <span class="qa__summary-text"><?php the_title(); ?></span>
+                  <span class="qa__summary-button"></span>
+                </summary>
+                <div class="qa__answer js-content">
+                  <div class="qa__answer-inner">
+                    <span class="qa__answer-text">
+                      <?php the_content(); ?></span>
+                  </div>
                 </div>
-              </div>
-            </details>
-<?php endwhile; ?>
-<?php endif;
-            ?>
-          </div>
+              </details>
+            <?php endwhile; ?>
+          <?php endif;
+          ?>
         </div>
+      </div>
     </section>
     <!-- end faq -->
   </div>

@@ -8,6 +8,10 @@ page > service > service
 }
 
 .program {
+  @include mq(md) {
+    max-width: 1100px;
+    margin-inline: auto;
+  }
 }
 
 .program__inner {
@@ -18,26 +22,51 @@ page > service > service
   font-size: 20px;
   font-weight: 700;
   line-height: 1.4;
+
+  @include mq(md) {
+    font-size: 28px;
+  }
 }
 
 .program__content {
   margin-top: 60px;
+
+  @include mq(md) {
+    margin-top: 133px;
+  }
 }
 
 .program__item {
+  @include mq(md) {
+    position: relative;
+  }
+
   & + & {
     margin-top: 231px;
+
+    @include mq(md) {
+      margin-top: 347px;
+    }
   }
 }
 
 .program__img {
   width: 100vw;
   z-index: 1;
+
   & img {
     position: absolute;
+
     right: 0;
     width: 188px;
     aspect-ratio: 188/301;
+
+    @include mq(md) {
+      width: 560px;
+      aspect-ratio: 560/896;
+      right: -20px;
+      top: 63px;
+    }
   }
 }
 
@@ -45,11 +74,21 @@ page > service > service
   & .program__img {
     & img {
       left: 0;
+
+      @include mq(md) {
+        left: -20px;
+      }
     }
   }
 
   & .program__num {
     right: 0;
+  }
+
+  & .program__text {
+    @include mq(md) {
+      margin-left: auto;
+    }
   }
 }
 
@@ -60,6 +99,12 @@ page > service > service
   z-index: 2;
   top: 153px;
   padding: 40px 20px;
+
+  @include mq(md) {
+    top: 0;
+    padding: 82px 40px 60px;
+    width: 590px;
+  }
 }
 
 .program__head {
@@ -69,8 +114,16 @@ page > service > service
 .program__num {
   position: absolute;
   top: -82px;
+
+  @include mq(md) {
+    top: -140px;
+  }
   & img {
     width: 72px;
+
+    @include mq(md) {
+      width: 103px;
+    }
   }
 }
 
@@ -78,6 +131,10 @@ page > service > service
   font-size: 28px;
   font-weight: 700;
   line-height: 1.4;
+
+  @include mq(md) {
+    font-size: 40px;
+  }
 }
 
 .program__title-en {
@@ -86,16 +143,28 @@ page > service > service
   font-size: 14px;
   font-style: italic;
   font-weight: 500;
+
+  @include mq(md) {
+    font-size: 16px;
+  }
 }
 
 .program__detail {
   margin-top: 31px;
   font-size: 14px;
   font-weight: 500;
+
+  @include mq(md) {
+    margin-top: 59px;
+  }
 }
 
 .program__data {
   margin-top: 30px;
+
+  @include mq(md) {
+    margin-top: 58px;
+  }
 }
 
 .program__table {
@@ -111,6 +180,11 @@ page > service > service
     white-space: nowrap;
     padding-top: 18px;
     padding-bottom: 18px;
+
+    @include mq(md) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
   }
 
   & td {
@@ -121,6 +195,10 @@ page > service > service
 .program__button {
   margin-top: 32px;
   text-align: center;
+
+  @include mq(md) {
+    margin-top: 60px;
+  }
 }
 
 /*!
@@ -237,9 +315,19 @@ page > service > qa
 .qa {
   margin-top: 60px;
   margin-bottom: 100px;
+
+  @include mq(md) {
+    margin-top: 160px;
+    margin-bottom: 160px;
+  }
 }
 
 .qa__inner {
+  @include mq(md) {
+    max-width: 688px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .qa__title {
@@ -250,6 +338,10 @@ page > service > qa
 
 .qa__content {
   margin-top: 56px;
+
+  @include mq(md) {
+    margin-top: 60px;
+  }
 }
 
 .qa__box {
@@ -265,6 +357,12 @@ page > service > qa
   padding-bottom: 16px;
   cursor: pointer;
 
+  @include mq(md) {
+    gap: 40px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
   // safari用
   &::-webkit-details-marker {
     display: none;
@@ -276,6 +374,10 @@ page > service > qa
   font-weight: 700;
   line-height: 1.4;
 
+  @include mq(md) {
+    font-size: 20px;
+  }
+
   .qa__box.is-open & {
     color: #e61264;
   }
@@ -285,7 +387,6 @@ page > service > qa
   width: 21px;
   height: 21px;
   position: relative;
-  // margin-left: auto;
   display: block;
 
   &::before,
@@ -295,7 +396,6 @@ page > service > qa
     top: 50%;
     left: 50%;
     display: block;
-    // width: 100%;
     width: 21px;
     height: 2px;
     background: #1a1a1a;
@@ -330,6 +430,11 @@ page > service > qa
 .qa__answer-inner {
   padding-top: 18px;
   padding-bottom: 19px;
+
+  @include mq(md) {
+    padding-top: 0;
+    padding-bottom: 31px;
+  }
 }
 
 .qa__answer-text {

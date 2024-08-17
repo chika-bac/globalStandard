@@ -2866,19 +2866,46 @@ page > case-study
 page > service > service
 ------------------------------
 */
+@media screen and (min-width: 768px) {
+  .program {
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+}
+
 .program__title {
   text-align: center;
   font-size: 20px;
   font-weight: 700;
   line-height: 1.4;
 }
+@media screen and (min-width: 768px) {
+  .program__title {
+    font-size: 28px;
+  }
+}
 
 .program__content {
   margin-top: 60px;
 }
+@media screen and (min-width: 768px) {
+  .program__content {
+    margin-top: 133px;
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .program__item {
+    position: relative;
+  }
+}
 .program__item + .program__item {
   margin-top: 231px;
+}
+@media screen and (min-width: 768px) {
+  .program__item + .program__item {
+    margin-top: 347px;
+  }
 }
 
 .program__img {
@@ -2891,12 +2918,30 @@ page > service > service
   width: 188px;
   aspect-ratio: 188/301;
 }
+@media screen and (min-width: 768px) {
+  .program__img img {
+    width: 560px;
+    aspect-ratio: 560/896;
+    right: -20px;
+    top: 63px;
+  }
+}
 
 .service__program_2 .program__img img {
   left: 0;
 }
+@media screen and (min-width: 768px) {
+  .service__program_2 .program__img img {
+    left: -20px;
+  }
+}
 .service__program_2 .program__num {
   right: 0;
+}
+@media screen and (min-width: 768px) {
+  .service__program_2 .program__text {
+    margin-left: auto;
+  }
 }
 
 .program__text {
@@ -2908,6 +2953,13 @@ page > service > service
   top: 153px;
   padding: 40px 20px;
 }
+@media screen and (min-width: 768px) {
+  .program__text {
+    top: 0;
+    padding: 82px 40px 60px;
+    width: 590px;
+  }
+}
 
 .program__head {
   position: relative;
@@ -2917,14 +2969,29 @@ page > service > service
   position: absolute;
   top: -82px;
 }
+@media screen and (min-width: 768px) {
+  .program__num {
+    top: -140px;
+  }
+}
 .program__num img {
   width: 72px;
+}
+@media screen and (min-width: 768px) {
+  .program__num img {
+    width: 103px;
+  }
 }
 
 .program__title-jp {
   font-size: 28px;
   font-weight: 700;
   line-height: 1.4;
+}
+@media screen and (min-width: 768px) {
+  .program__title-jp {
+    font-size: 40px;
+  }
 }
 
 .program__title-en {
@@ -2934,15 +3001,30 @@ page > service > service
   font-style: italic;
   font-weight: 500;
 }
+@media screen and (min-width: 768px) {
+  .program__title-en {
+    font-size: 16px;
+  }
+}
 
 .program__detail {
   margin-top: 31px;
   font-size: 14px;
   font-weight: 500;
 }
+@media screen and (min-width: 768px) {
+  .program__detail {
+    margin-top: 59px;
+  }
+}
 
 .program__data {
   margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .program__data {
+    margin-top: 58px;
+  }
 }
 
 .program__table tr {
@@ -2957,6 +3039,12 @@ page > service > service
   padding-top: 18px;
   padding-bottom: 18px;
 }
+@media screen and (min-width: 768px) {
+  .program__table th {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
 .program__table td {
   font-weight: 500;
 }
@@ -2964,6 +3052,11 @@ page > service > service
 .program__button {
   margin-top: 32px;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .program__button {
+    margin-top: 60px;
+  }
 }
 
 /*!
@@ -3051,6 +3144,20 @@ page > service > qa
   margin-top: 60px;
   margin-bottom: 100px;
 }
+@media screen and (min-width: 768px) {
+  .qa {
+    margin-top: 160px;
+    margin-bottom: 160px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .qa__inner {
+    max-width: 688px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .qa__title {
   text-align: center;
@@ -3060,6 +3167,11 @@ page > service > qa
 
 .qa__content {
   margin-top: 56px;
+}
+@media screen and (min-width: 768px) {
+  .qa__content {
+    margin-top: 60px;
+  }
 }
 
 .qa__box {
@@ -3081,6 +3193,13 @@ page > service > qa
   padding-bottom: 16px;
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  .qa__summary {
+    gap: 40px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
 .qa__summary::-webkit-details-marker {
   display: none;
 }
@@ -3089,6 +3208,11 @@ page > service > qa
   font-size: 16px;
   font-weight: 700;
   line-height: 1.4;
+}
+@media screen and (min-width: 768px) {
+  .qa__summary-text {
+    font-size: 20px;
+  }
 }
 .qa__box.is-open .qa__summary-text {
   color: #e61264;
@@ -3135,6 +3259,12 @@ page > service > qa
 .qa__answer-inner {
   padding-top: 18px;
   padding-bottom: 19px;
+}
+@media screen and (min-width: 768px) {
+  .qa__answer-inner {
+    padding-top: 0;
+    padding-bottom: 31px;
+  }
 }
 
 .qa__answer-text {

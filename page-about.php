@@ -67,7 +67,7 @@ get_header();
       </div>
     </section>
     <section class="members">
-    <div class="members__bg"></div>
+      <div class="members__bg"></div>
       <div class="members__inner">
         <h3 class="members__title">役員紹介</h3>
         <div class="members__content">

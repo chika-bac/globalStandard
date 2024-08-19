@@ -104,3 +104,84 @@ component > button
     }
   }
 }
+
+// トップーページのmoreボタン
+.more-link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.more-link__text {
+  font-family: var(--font-family-en);
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  position: relative;
+  color: #fff;
+
+  &.more-link__text--blue {
+    color: #023e78;
+
+    &::after {
+      border-right-color: #023e78;
+      border-bottom-color: #023e78;
+    }
+  }
+
+  @include mq(md) {
+    font-size: clamp(1.75rem, 1.375rem + 0.78vw, 2rem); // 28px ~ 32px
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(50% - 8px);
+    // view moreとの間隔 + 矢印の幅
+    right: calc(-13px - 64px);
+    width: 64px;
+    height: 10px;
+    border: none;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: skew(45deg);
+    transition: all 0.3s;
+
+    @include mq(md) {
+      width: 95px;
+      height: 10px;
+      right: calc(-19px - 95px);
+    }
+  }
+
+  &:hover::after {
+    right: -108px;
+    width: calc(64px + 30px);
+
+    @include mq(md) {
+      right: -146px;
+      width: calc(95px + 30px);
+    }
+  }
+}
+
+.more-link__circle {
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid #fff400;
+  width: 40px;
+  height: 40px;
+  margin-left: 57px;
+
+  &.more-link__circle--yellow {
+    background: #fff400;
+  }
+
+  @include mq(md) {
+    border: 3px solid #fff400;
+    width: 51px;
+    height: 51px;
+    margin-left: 89px;
+  }
+}

@@ -53,7 +53,7 @@
             <div class="top-service__img">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/wp_upload/service-program01.png" alt="">
             </div>
-            <p class="top-service__name">ビジネス英語研修</p>
+            <p class="top-service__name"><span>ビジネス英語研修</span></p>
             <p class="top-service__text">
               ビジネス英会話はこれからの時代、すべてのビジネスパーソンが学ぶべき必須スキルと考えおります。海外にビジネス展開する際にはもちろんのこと、日本国内でも英会話コミュニケーションができることによってチャンスが掴める場面があります。
             </p>
@@ -66,7 +66,10 @@
             <div class="top-service__img">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/wp_upload/service-program02.png" alt="">
             </div>
-            <p class="top-service__name">異文化<br>コミュニケーション研修</p>
+            <p class="top-service__name">
+              <span>異文化</span>
+              <span>コミュニケーション研修</span>
+            </p>
             <p class="top-service__text">
               急速にグローバル化が進んでおり、ビジネスの場面に限らず様々な文化的背景を持つ者同士の交流はもはや日常的な光景となりました。<br>言語や文化が異なる相手を理解することで世界が広がり、新たなビジネスチャンスに巡り会うことは少なくありません。
             </p>
@@ -78,7 +81,10 @@
             <div class="top-service__img">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/wp_upload/service-program03.png" alt="">
             </div>
-            <p class="top-service__name">ビジネス留学<br>サポートプログラム</p>
+            <p class="top-service__name">
+              <span>ビジネス留学</span>
+              <span>サポートプログラム</span>
+            </p>
             <p class="top-service__text">
               将来的に海外で働きたい方に向けた講座をご用意しております。一般的には3ヶ月〜1年の期間で基本的な英会話スキルと、海外でのビジネスマナー習得を目指します。
               通常の語学留学では得られないビジネスの場で通用するコミュニケーションスキル習得に重点をおいておりますので、海外でビジネス展開する際に自信を持って活動することができるようになります。
@@ -87,8 +93,8 @@
         </div>
 
         <a href="" class="top-service__link more-link">
-          <span class="more-link__text">View more</span>
-          <span class="more-link__circle"></span>
+          <span class="more-link__text more-link__text--blue">View more</span>
+          <span class="more-link__circle more-link__circle--yellow"></span>
         </a>
       </div>
     </div>

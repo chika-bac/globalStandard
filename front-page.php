@@ -169,14 +169,22 @@
           if ($news->have_posts()) : ?>
             <?php while ($news->have_posts()) : $news->the_post(); ?>
               <!-- ニュースいれる -->
+              <article class="top-news__item">
+                <a href="<?php the_permalink(); ?>">
+                  <div class="top-news__meta">
+                    <div class="top-news__cat"><?php echo get_post_category(false); ?></div>
+                    <time class="top-news__time" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+                  </div>
+                  <h3 class="top-news__title"><?php the_title(); ?></h3>
+                </a>
+              </article>
           <?php endwhile;
             wp_reset_postdata();
           endif; ?>
-
         </div>
         <a href="" class="top-news__link more-link">
-          <span class="more-link__text">View more</span>
-          <span class="more-link__circle"></span>
+          <span class="more-link__text more-link__text--blue">View more</span>
+          <span class="more-link__circle more-link__circle--yellow"></span>
         </a>
       </div>
     </div>

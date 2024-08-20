@@ -155,13 +155,13 @@ page > about > mission
 }
 
 .company {
-  background: url(../../assets/img/about-company-bg_sp.png) no-repeat center/cover;
+  background: url(../../assets/img/company-bg_sp.png) no-repeat center/cover;
   margin: 0 calc(50% - 50vw);
   width: 100vw;
   padding: 60px 20px;
 
   @include mq(md) {
-    background-image: url(../../assets/img/about-company-bg_pc.png);
+    background-image: url(../../assets/img/company-bg_pc.png);
     padding-top: 80px;
     padding-bottom: 80px;
     padding-inline: 0;

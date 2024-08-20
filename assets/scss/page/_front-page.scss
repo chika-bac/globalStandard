@@ -109,6 +109,9 @@ about
       top: 145px;
       height: 61%;
     }
+    @include mq(lg) {
+      top: 122px;
+    }
   }
 }
 
@@ -195,7 +198,7 @@ about
   bottom: 0;
   top: 0;
   // .sectionのpaddingを引いた値
-  right: -20px;
+  right: -36px;
   width: clamp(18.438rem, -0.635rem + 84.77vw, 40rem); // 295px ~ 640px
   height: clamp(22.625rem, 9.468rem + 58.48vw, 37.5rem); // 362px ~ 600px
   z-index: 1;
@@ -267,7 +270,7 @@ top-service
 
   @include mq(md) {
     flex-direction: row;
-    gap: 70px;
+    gap: clamp(2.5rem, -0.313rem + 5.86vw, 4.375rem); // 40px ~ 70px
   }
 }
 
@@ -293,6 +296,7 @@ top-service
   position: absolute;
   top: -55px;
   right: 0;
+  z-index: 1;
 
   & img {
     width: 99px;
@@ -301,8 +305,9 @@ top-service
 
 .top-service__img {
   text-align: center;
+  position: relative;
   & img {
-    width: 320px;
+    width: clamp(20rem, 4.455rem + 66.33vw, 36.25rem); // 320px ~ 580px
 
     @include mq(md) {
       width: 100%;
@@ -315,11 +320,13 @@ top-service
   font-size: 28px;
   font-weight: 700;
   position: absolute;
-  top: 370px;
+  bottom: 200px;
   left: -8px;
 
   @include mq(md) {
-    left: -32px;
+    left: -16px;
+    bottom: 33px;
+    font-size: clamp(1.313rem, 0.656rem + 1.37vw, 1.75rem); // 21px ~ 28px
   }
 
   & span {
@@ -328,6 +335,7 @@ top-service
     background: #fff;
     line-height: 1.2;
     padding: 2px 4px;
+    white-space: nowrap;
 
     & + span {
       margin-top: 8px;
@@ -397,11 +405,18 @@ top-case
 
   @include mq(md) {
     grid-template-columns: repeat(3, 1fr);
-    gap: 70px;
+    gap: clamp(1.25rem, -3.438rem + 9.77vw, 4.375rem); // 20px ~ 70px
   }
 }
 
 .top-case__item {
+  @include mq(sm) {
+    width: 80%;
+    margin-inline: auto;
+  }
+  @include mq(md) {
+    width: 100%;
+  }
 }
 
 .top-case__img {
@@ -421,7 +436,7 @@ top-case
     aspect-ratio: 1/1;
 
     @include mq(md) {
-      width: 200px;
+      width: clamp(6.25rem, -3.125rem + 19.53vw, 12.5rem); // 100px ~ 200px
     }
   }
 }
@@ -457,7 +472,7 @@ top-case
   font-size: 14px;
   font-weight: 700;
   border: 1px solid #fff;
-  padding: 5px 15px;
+  padding: 5px clamp(0.313rem, -0.625rem + 1.95vw, 0.938rem); // 5px ~ 15px
 }
 
 .top-case__more {

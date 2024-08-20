@@ -439,7 +439,7 @@ component > heading
 
 .heading__en {
   font-family: var(--font-family-en);
-  font-size: 52px;
+  font-size: clamp(3.25rem, 1.337rem + 8.16vw, 5.25rem);
   font-style: italic;
   font-weight: 500;
   text-transform: uppercase;
@@ -452,7 +452,7 @@ component > heading
 
 .heading__ja {
   font-family: var(--font-family-ja);
-  font-size: 16px;
+  font-size: clamp(1rem, 0.522rem + 2.04vw, 1.5rem);
   font-weight: 700;
   margin-top: 3px;
 }
@@ -1516,7 +1516,7 @@ layout > container
 
 .inner {
   margin-inline: auto;
-  padding-inline: clamp(1.25rem, 0.415rem + 3.71vw, 2.5rem);
+  margin-inline: clamp(1.25rem, 0.415rem + 3.71vw, 2.5rem);
 }
 @media screen and (min-width: 900px) {
   .inner {
@@ -1834,6 +1834,11 @@ about
     height: 61%;
   }
 }
+@media screen and (min-width: 900px) {
+  .about::before {
+    top: 122px;
+  }
+}
 
 .about__inner {
   padding-bottom: 350px;
@@ -1923,7 +1928,7 @@ about
   background: url(../../assets/img/about-bg-sp.png) no-repeat center center/cover;
   bottom: 0;
   top: 0;
-  right: -20px;
+  right: -36px;
   width: clamp(18.438rem, -0.635rem + 84.77vw, 40rem);
   height: clamp(22.625rem, 9.468rem + 58.48vw, 37.5rem);
   z-index: 1;
@@ -2005,7 +2010,7 @@ top-service
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 70px;
+    gap: clamp(2.5rem, -0.313rem + 5.86vw, 4.375rem);
   }
 }
 
@@ -2034,6 +2039,7 @@ top-service
   position: absolute;
   top: -55px;
   right: 0;
+  z-index: 1;
 }
 .top-service__num img {
   width: 99px;
@@ -2041,9 +2047,10 @@ top-service
 
 .top-service__img {
   text-align: center;
+  position: relative;
 }
 .top-service__img img {
-  width: 320px;
+  width: clamp(20rem, 4.455rem + 66.33vw, 36.25rem);
 }
 @media screen and (min-width: 768px) {
   .top-service__img img {
@@ -2056,12 +2063,14 @@ top-service
   font-size: 28px;
   font-weight: 700;
   position: absolute;
-  top: 370px;
+  bottom: 200px;
   left: -8px;
 }
 @media screen and (min-width: 768px) {
   .top-service__name {
-    left: -32px;
+    left: -16px;
+    bottom: 33px;
+    font-size: clamp(1.313rem, 0.656rem + 1.37vw, 1.75rem);
   }
 }
 .top-service__name span {
@@ -2072,6 +2081,7 @@ top-service
   background: #fff;
   line-height: 1.2;
   padding: 2px 4px;
+  white-space: nowrap;
 }
 .top-service__name span + span {
   margin-top: 8px;
@@ -2144,7 +2154,19 @@ top-case
 @media screen and (min-width: 768px) {
   .top-case__items {
     grid-template-columns: repeat(3, 1fr);
-    gap: 70px;
+    gap: clamp(1.25rem, -3.438rem + 9.77vw, 4.375rem);
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .top-case__item {
+    width: 80%;
+    margin-inline: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .top-case__item {
+    width: 100%;
   }
 }
 
@@ -2167,7 +2189,7 @@ top-case
 }
 @media screen and (min-width: 768px) {
   .top-case__img img {
-    width: 200px;
+    width: clamp(6.25rem, -3.125rem + 19.53vw, 12.5rem);
   }
 }
 
@@ -2213,7 +2235,7 @@ top-case
   font-size: 14px;
   font-weight: 700;
   border: 1px solid #fff;
-  padding: 5px 15px;
+  padding: 5px clamp(0.313rem, -0.625rem + 1.95vw, 0.938rem);
 }
 
 .top-case__more {
@@ -2771,14 +2793,14 @@ page > about > mission
 }
 
 .company {
-  background: url(../../assets/img/about-company-bg_sp.png) no-repeat center/cover;
+  background: url(../../assets/img/company-bg_sp.png) no-repeat center/cover;
   margin: 0 calc(50% - 50vw);
   width: 100vw;
   padding: 60px 20px;
 }
 @media screen and (min-width: 768px) {
   .company {
-    background-image: url(../../assets/img/about-company-bg_pc.png);
+    background-image: url(../../assets/img/company-bg_pc.png);
     padding-top: 80px;
     padding-bottom: 80px;
     padding-inline: 0;

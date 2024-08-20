@@ -11,7 +11,8 @@ component > heading
 
 .heading__en {
   font-family: var(--font-family-en);
-  font-size: 52px;
+  // font-size: 52px;
+  font-size: clamp(3.25rem, 1.337rem + 8.16vw, 5.25rem); // 52px ~ 84px
   font-style: italic;
   font-weight: 500;
   text-transform: uppercase;
@@ -23,7 +24,8 @@ component > heading
 
 .heading__ja {
   font-family: var(--font-family-ja);
-  font-size: 16px;
+  // font-size: 16px;
+  font-size: clamp(1rem, 0.522rem + 2.04vw, 1.5rem); // 16px ~ 24px
   font-weight: 700;
   margin-top: 3px;
 

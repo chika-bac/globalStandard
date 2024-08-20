@@ -129,6 +129,15 @@ component > button
     }
   }
 
+  &.more-link__text--black {
+    color: #1a1a1a;
+
+    &::after {
+      border-right-color: #1a1a1a;
+      border-bottom-color: #1a1a1a;
+    }
+  }
+
   @include mq(md) {
     font-size: clamp(1.75rem, 1.375rem + 0.78vw, 2rem); // 28px ~ 32px
   }

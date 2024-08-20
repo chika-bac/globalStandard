@@ -168,7 +168,6 @@
           $news = new WP_Query($args);
           if ($news->have_posts()) : ?>
             <?php while ($news->have_posts()) : $news->the_post(); ?>
-              <!-- ニュースいれる -->
               <article class="top-news__item">
                 <a href="<?php the_permalink(); ?>">
                   <div class="top-news__meta">
@@ -183,7 +182,7 @@
           endif; ?>
         </div>
         <a href="" class="top-news__link more-link">
-          <span class="more-link__text more-link__text--blue">View more</span>
+          <span class="more-link__text more-link__text--black">View more</span>
           <span class="more-link__circle more-link__circle--yellow"></span>
         </a>
       </div>

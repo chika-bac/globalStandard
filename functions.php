@@ -145,6 +145,9 @@ function get_main_title()
   } elseif (is_page('download') || is_page('download/thanks')) {
     // ダウンロードページ
     return array('en_title' => 'DOWNLOAD', 'ja_title' => '資料ダウンロード');
+  } elseif (is_404()) {
+    // 404ページ
+    return array('en_title' => '404 NOT FOUND', 'ja_title' => 'お探しのページが見つかりません');
   }
 }
 
@@ -159,7 +162,7 @@ function get_main_image_class()
   } elseif (is_page('case')) {
     // 導入事例ページ
     return 'lower-fv--case';
-  } elseif (is_page('about')) {
+  } elseif (is_page('about') || is_404()) {
     // 当社についてページ
     return 'lower-fv--about';
   } elseif (is_page('service')) {

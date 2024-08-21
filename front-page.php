@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-
-
 <main>
   <!-- about -->
   <section class="about section">
@@ -114,7 +112,7 @@
           <?php
           $terms = get_terms('pickup');
           foreach ($terms as $term) :
-            $cases = get_specific_contents('case_study', -1, 'pickup', 'pickup');
+            $cases = get_specific_contents('case', -1, 'pickup', 'pickup');
             if ($cases->have_posts()) :
               while ($cases->have_posts()) : $cases->the_post(); ?>
                 <div class="top-case__item">

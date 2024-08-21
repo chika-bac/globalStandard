@@ -20,7 +20,7 @@ get_header();
     <div class="case__container">
       <?php
       foreach ($terms as $term) :
-        include('template-parts/content-case-study.php');
+        include('template-parts/content-case.php');
       endforeach; ?>
 
     </div>

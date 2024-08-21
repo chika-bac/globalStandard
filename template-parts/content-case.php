@@ -6,7 +6,7 @@
     </h3>
     <div class="case__items">
       <?php
-      $cases = get_specific_contents('case_study', -1, 'junre', $term->slug);
+      $cases = get_specific_contents('case', -1, 'junre', $term->slug);
       if ($cases->have_posts()) :
         while ($cases->have_posts()) : $cases->the_post(); ?>
           <article class="case__item case-item">

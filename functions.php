@@ -130,7 +130,7 @@ function get_main_title()
   if (is_home() || is_single()) {
     // 投稿一覧ページ・投稿詳細ページ
     return array('en_title' => 'NEWS', 'ja_title' => 'ニュース');
-  } elseif (is_page('case_study')) {
+  } elseif (is_page('case')) {
     // 導入事例ページ
     return array('en_title' => 'CASE STUDY', 'ja_title' => '導入事例');
   } elseif (is_page('about')) {
@@ -150,7 +150,7 @@ function get_main_image_class()
   if (is_home() || is_single()) {
     // 投稿一覧ページ・投稿詳細ページ
     return 'lower-fv--news';
-  } elseif (is_page('case_study')) {
+  } elseif (is_page('case')) {
     // 導入事例ページ
     return 'lower-fv--case';
   } elseif (is_page('about')) {

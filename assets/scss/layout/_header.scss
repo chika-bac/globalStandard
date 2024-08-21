@@ -206,6 +206,7 @@ layout > lower-fv
   }
 }
 
+// ニュース一覧・個別ページ
 .lower-fv--news {
   background-image: url(../../assets/img/lower-fv-news_sp.png);
 
@@ -213,6 +214,7 @@ layout > lower-fv
     background-image: url(../../assets/img/lower-fv-news_pc.png);
   }
 }
+// 導入事例一覧
 .lower-fv--case {
   background-image: url(../../assets/img/lower-fv-case_sp.png);
 
@@ -221,6 +223,7 @@ layout > lower-fv
   }
 }
 
+// 当社について
 .lower-fv--about {
   background-image: url(../../assets/img/lower-fv-about_sp.png);
 
@@ -229,11 +232,30 @@ layout > lower-fv
   }
 }
 
+// 　サービス
 .lower-fv--service {
   background-image: url(../../assets/img/lower-fv-service_sp.png);
 
   @include mq(lg) {
     background-image: url(../../assets/img/lower-fv-service_pc.png);
+  }
+}
+
+// 問い合わせ（完了）ページ
+.lower-fv--contact {
+  background-image: url(../../assets/img/lower-fv-contact_sp.png);
+
+  @include mq(lg) {
+    background-image: url(../../assets/img/lower-fv-contact_pc.png);
+  }
+}
+
+// ダウンロード（完了）ページ
+.lower-fv--download {
+  background-image: url(../../assets/img/lower-fv-download_sp.png);
+
+  @include mq(lg) {
+    background-image: url(../../assets/img/lower-fv-download_pc.png);
   }
 }
 

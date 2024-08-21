@@ -1,0 +1,28 @@
+@use "../global" as *;
+
+/*!
+page > contact
+------------------------------
+*/
+.contact {
+  margin-bottom: 100px;
+}
+
+.contact__inner {
+}
+
+.contact__msg {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact__heading {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.contact__content {
+  margin-top: 40px;
+}

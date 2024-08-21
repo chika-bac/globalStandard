@@ -14,36 +14,37 @@ select {
 .form-field {
   & + & {
     margin-top: 20px;
-  }
 
-  @include mq(md) {
-    // flex-direction: row;
-    // gap: 40px;
+    @include mq(md) {
+      margin-top: 32px;
+    }
   }
-}
-
-// メッセージの部分だけラベルが上揃いになるように
-.form-field-message {
-  // align-items: flex-start;
-  // margin-top: 3px;
 }
 
 .form-field__head {
   display: flex;
   align-items: center;
   gap: 12px;
+
+  &.form-field__head--download {
+    gap: 8px;
+
+    @include mq(md) {
+      gap: 9px;
+    }
+  }
 }
 
 .form-field__label {
   font-size: 14px;
   font-weight: 700;
 
-  &.is-error {
-    // color: var(--color-red);
+  @include mq(md) {
+    font-size: 18px;
   }
 
-  @include mq(md) {
-    // font-size: 16px;
+  &.is-error {
+    // color: var(--color-red);
   }
 }
 
@@ -53,16 +54,13 @@ select {
   font-weight: 700;
   background: #e61264;
   padding: 2px 8px;
-
-  @include mq(md) {
-  }
 }
 
 .form-field__item {
   width: 100%;
-  margin-top: 9px;
+  margin-top: 8px;
   @include mq(md) {
-    // flex: 1;
+    margin-top: 12px;
   }
 }
 
@@ -73,6 +71,11 @@ select {
   background: #fff;
   font-size: 14px;
   padding: 12px 16px;
+
+  @include mq(md) {
+    font-size: 16px;
+    padding: 10px 16px;
+  }
 
   &::placeholder {
     color: #ccc;
@@ -86,10 +89,6 @@ select {
   &.is-error {
     // border-color: var(--color-red);
     // background: #fff0f7;
-  }
-
-  @include mq(md) {
-    // font-size: 16px;
   }
 }
 
@@ -122,6 +121,11 @@ select {
     font-size: 14px;
     cursor: pointer;
 
+    @include mq(md) {
+      padding: 10px 16px;
+      font-size: 16px;
+    }
+
     &:focus {
       border-color: red;
     }
@@ -129,10 +133,6 @@ select {
     &.is-error {
       // background-image: url(../images/icon-select-arrow.svg), linear-gradient(to left, #ce2073 52px, #fff0f7 52px);
       // border-color: #ce2073;
-    }
-
-    @include mq(md) {
-      // font-size: 16px;
     }
   }
 }
@@ -147,7 +147,9 @@ select {
   height: 140px;
 
   @include mq(md) {
-    // font-size: 16px;
+    font-size: 16px;
+    padding: 10px 16px;
+    height: 240px;
   }
 
   &:focus {
@@ -210,6 +212,12 @@ select {
   position: relative;
   // チェックボックスの外枠 + チェックボックスとテキストの間隔
   padding-left: calc(28px + 10px);
+  white-space: nowrap;
+
+  @include mq(md) {
+    padding-left: calc(32px + 10px);
+    font-size: 16px;
+  }
 
   &::before,
   &::after {
@@ -228,6 +236,11 @@ select {
     height: 28px;
     border: 1px solid #3e3e3e;
     background: #fff;
+
+    @include mq(md) {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   // チェックマーク
@@ -240,6 +253,13 @@ select {
     border-bottom: 1px solid var(--color-black);
     transform: rotate(-45deg);
     opacity: 0;
+
+    @include mq(md) {
+      left: 8px;
+      top: 3px;
+      width: 16px;
+      height: 10px;
+    }
   }
 
   & a {
@@ -247,6 +267,10 @@ select {
     text-decoration: underline;
     font-weight: 700;
     padding-right: 6px;
+
+    @include mq(md) {
+      padding-right: 10px;
+    }
   }
 }
 
@@ -260,5 +284,19 @@ select {
     font-weight: 500;
     padding-top: 26px;
     padding-bottom: 26px;
+
+    @include mq(md) {
+      width: 208px;
+      font-size: 16px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+
+    &.button-submit--download {
+      @include mq(md) {
+        width: 100%;
+        max-width: 336px;
+      }
+    }
   }
 }

@@ -139,12 +139,12 @@ function get_main_title()
   } elseif (is_page('service')) {
     // サービスページ
     return array('en_title' => 'SERVICE', 'ja_title' => 'サービス');
-  } elseif (is_page('contact') || is_page('contact-thanks')) {
+  } elseif (is_page('contact') || is_page('contact/thanks')) {
     // お問い合わせページ
     return array('en_title' => 'CONTACT', 'ja_title' => 'お問い合わせ');
-  } elseif (is_page('download') || is_page('download-thanks')) {
+  } elseif (is_page('download') || is_page('download/thanks')) {
     // ダウンロードページ
-    return array('en_title' => 'DOWNLOAD', 'ja_title' => 'ダウンロード');
+    return array('en_title' => 'DOWNLOAD', 'ja_title' => '資料ダウンロード');
   }
 }
 
@@ -165,10 +165,10 @@ function get_main_image_class()
   } elseif (is_page('service')) {
     // サービスページ
     return 'lower-fv--service';
-  } elseif (is_page('contact') || is_page('contact-thanks')) {
+  } elseif (is_page('contact') || is_page('contact/thanks')) {
     // お問い合わせ（完了）ページ
     return 'lower-fv--contact';
-  } elseif (is_page('download') || is_page('download-thanks')) {
+  } elseif (is_page('download') || is_page('download/thanks')) {
     // ダウンロード（完了）ページ
     return 'lower-fv--download';
   }

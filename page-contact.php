@@ -86,7 +86,7 @@ get_header();
                   </div>
                 </div>
                 <!-- message -->
-                <div class="form-field form-field-message">
+                <div class="form-field">
                   <div class="form-field__head">
                     <label for="your-content" class="form-field__label">ご用件の詳細</label>
                     <span class="form-field__tag">必須</span>
@@ -109,7 +109,7 @@ get_header();
 
               <!-- submit btn -->
               <div class="contact__button">
-                <input type="submit" value="送信" class="button button--secondary button-submit" aria-label="送信ボタン" />
+                <input type="submit" value="送　信" class="button button--secondary button-submit" aria-label="送信ボタン" />
               </div>
               <!-- end submit btn -->
             </div>

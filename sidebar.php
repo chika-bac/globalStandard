@@ -17,7 +17,6 @@
                     <div class="post__list-category side-post__category">
                       <?php echo get_post_category(false); ?>
                     </div>
-                    <?php echo attach_new_label(); ?>
                   </div>
                   <time class="post__list-time post__list-right" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                 </div>

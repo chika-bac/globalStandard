@@ -43,22 +43,6 @@ function my_menu_init()
 add_action('init', 'my_menu_init');
 
 /** ------------------------------------------
- * 新着記事にNEWマークを付ける
- * ----------------------------------------**/
-function attach_new_label()
-{
-  $day = 7; // NEWを表示する日数
-  $today = date_i18n('U'); // 今日の日付を取得
-  $entry = get_the_time('U'); // 投稿日の取得
-  $term = date('U', ($today - $entry)) / 86400; // 何日前か計算
-  if ($day > $term) {
-    return  '<span class="new-label">NEW</span>';
-  } else {
-    return;
-  }
-}
-
-/** ------------------------------------------
  * カテゴリの取得と表示
  * ----------------------------------------**/
 function get_post_category($anchor = true)

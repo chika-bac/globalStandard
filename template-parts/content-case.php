@@ -9,7 +9,7 @@
       $cases = get_specific_contents('case', -1, 'junre', $term->slug);
       if ($cases->have_posts()) :
         while ($cases->have_posts()) : $cases->the_post(); ?>
-          <article class="case__item case-item">
+          <article class="case__item case-item" id="<?php the_field('company_name'); ?>">
             <div class="case-item__head">
               <div class="case-item__title">
                 <span class="case-item__industry"><?php the_field('industry_type'); ?></span>
@@ -57,7 +57,8 @@
       endif; ?>
     </div>
     <div class="case__button">
-      <a href="" class="button button--secondary button--arrow"><?php echo $term->name; ?>の詳細</a>
+      <?php $service_url = home_url('service') . '/#' . $term->name; ?>
+      <a href="<?php echo $service_url; ?>" class="button button--secondary button--arrow"><?php echo $term->name; ?>の詳細</a>
     </div>
   </div>
 </section>

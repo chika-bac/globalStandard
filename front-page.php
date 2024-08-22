@@ -133,7 +133,8 @@
                       ?>
                     </div>
                     <div class="top-case__more">
-                      <a href="" class="top-case__more-link"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-top.svg" alt=""></a>
+                      <?php $case_url = home_url('case') . '/#' . get_field('company_name'); ?>
+                      <a href="<?php echo $case_url; ?>" class="top-case__more-link"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-top.svg" alt=""></a>
                     </div>
                   </div>
                 </div>
@@ -144,7 +145,7 @@
           endforeach; ?>
 
         </div>
-        <a href="<?php echo home_url("case"); ?>" class="top-case__link more-link">
+        <a href="<?php echo home_url('case'); ?>" class="top-case__link more-link">
           <span class="more-link__text">View more</span>
           <span class="more-link__circle"></span>
         </a>

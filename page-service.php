@@ -20,7 +20,7 @@ get_header();
                 $program_class = ($service == 'program_2') ? 'service__program_2' : '';
           ?>
                 <!-- .program__item -->
-                <div class="program__item  <?php echo $program_class; ?>">
+                <div id="<?php the_sub_field('program_name_jp'); ?>" class="program__item  <?php echo $program_class; ?>">
                   <div class="program__img">
                     <?php $image_id = get_sub_field('program_img');
                     echo wp_get_attachment_image($image_id, 'program'); ?>

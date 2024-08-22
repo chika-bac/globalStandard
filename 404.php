@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="container">
+<div class="container notfound-container">
   <div class="container__inner inner inner-sidebar">
     <main class="main">
       <div class="notfound__text">
@@ -8,7 +8,7 @@
         <p>このページをブックマークに登録されていた方は、お手数ですがブックマークの更新をお願い致します。</p>
       </div>
       <div class="notfound__link">
-        <a href="<?php echo esc_url(home_url('/')); ?>" class="button button--secondary">トップページへ戻る</a>
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="button button--secondary button--arrow">トップページへ戻る</a>
     </main>
     <?php get_sidebar(); ?>
   </div>

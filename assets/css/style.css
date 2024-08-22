@@ -3962,4 +3962,37 @@ page > download > thanks
   .download-thanks__text {
     margin-top: 36px;
   }
+}
+
+/*!
+page > 404
+------------------------------
+*/
+@media screen and (min-width: 768px) {
+  .notfound-container {
+    margin-bottom: 120px;
+  }
+}
+
+.notfound__text p {
+  font-size: 14px;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .notfound__text p {
+    font-size: 16px;
+  }
+}
+.notfound__text p + p {
+  margin-top: 24px;
+}
+
+.notfound__link {
+  text-align: center;
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .notfound__link {
+    margin-top: 60px;
+  }
 }/*# sourceMappingURL=style.css.map */

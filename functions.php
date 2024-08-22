@@ -127,7 +127,7 @@ function get_specific_contents($post_type, $posts_per_page = -1, $taxonomy = nul
  * ----------------------------------------**/
 function get_main_title()
 {
-  if (is_home() || is_single()) {
+  if (is_home() || is_single() || is_archive() || is_category()) {
     // 投稿一覧ページ・投稿詳細ページ
     return array('en_title' => 'NEWS', 'ja_title' => 'ニュース');
   } elseif (is_page('case')) {
@@ -156,7 +156,7 @@ function get_main_title()
  * ----------------------------------------**/
 function get_main_image_class()
 {
-  if (is_home() || is_single()) {
+  if (is_home() || is_single() || is_archive() || is_category()) {
     // 投稿一覧ページ・投稿詳細ページ
     return 'lower-fv--news';
   } elseif (is_page('case')) {

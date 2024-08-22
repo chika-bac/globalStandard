@@ -7,7 +7,7 @@
           <span class="footer__title-ja">資料ダウンロード</span>
         </p>
         <div class="footer__button">
-          <a href="" class="button button--more">View more</a>
+          <a href="<?php echo home_url("download"); ?>" class="button button--more">View more</a>
         </div>
       </div>
       <div class="footer__contact">
@@ -16,7 +16,7 @@
           <span class="footer__title-ja">お問い合わせ</span>
         </p>
         <div class="footer__button">
-          <a href="" class="button button--more">View more</a>
+          <a href="<?php echo home_url("contact"); ?>" class="button button--more">View more</a>
         </div>
       </div>
     </div>

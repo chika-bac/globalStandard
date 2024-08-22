@@ -12,7 +12,9 @@
 <body>
   <header class="header">
     <div class="header__inner">
-      <h1 class="header__logo">Global standard</h1>
+      <h1 class="header__logo">
+        <a href="<?php echo home_url("/"); ?>">Global standard</a>
+      </h1>
       <nav class="header__nav" aria-label="ヘッダーナビゲーション">
         <?php wp_nav_menu(
           array(
@@ -24,10 +26,10 @@
         ); ?>
         <div class="header__nav-button">
           <div class="nav-button">
-            <a href="#" class="button button--sm button--secondary">資料ダウンロード</a>
+            <a href="<?php echo home_url("download"); ?>" class="button button--sm button--secondary">資料ダウンロード</a>
           </div>
           <div class="nav-button">
-            <a href="#" class="button button--sm button--primary">お問い合わせ</a>
+            <a href="<?php echo home_url("contact"); ?>" class="button button--sm button--primary">お問い合わせ</a>
           </div>
         </div>
       </nav>
@@ -54,10 +56,10 @@
       ); ?>
       <div class="drawer__nav-button">
         <div class="nav-button">
-          <a href="#" class="button button--lg button--primary">資料ダウンロード</a>
+          <a href="<?php echo home_url("download"); ?>" class="button button--lg button--primary">資料ダウンロード</a>
         </div>
         <div class="nav-button">
-          <a href="#" class="button button--lg button--secondary">お問い合わせ</a>
+          <a href="<?php echo home_url("contact"); ?>" class="button button--lg button--secondary">お問い合わせ</a>
         </div>
       </div>
     </nav>

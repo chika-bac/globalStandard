@@ -23,7 +23,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-img.png" alt="" />
           </div>
 
-          <a href="" class="about__link more-link">
+          <a href="<?php echo home_url("about"); ?>" class="about__link more-link">
             <span class="more-link__text">View more</span>
             <span class="more-link__circle"></span>
           </a>
@@ -90,7 +90,7 @@
           </div>
         </div>
 
-        <a href="" class="top-service__link more-link">
+        <a href="<?php echo home_url("service"); ?>" class="top-service__link more-link">
           <span class="more-link__text more-link__text--blue">View more</span>
           <span class="more-link__circle more-link__circle--yellow"></span>
         </a>
@@ -144,7 +144,7 @@
           endforeach; ?>
 
         </div>
-        <a href="" class="top-case__link more-link">
+        <a href="<?php echo home_url("case"); ?>" class="top-case__link more-link">
           <span class="more-link__text">View more</span>
           <span class="more-link__circle"></span>
         </a>
@@ -184,7 +184,7 @@
             wp_reset_postdata();
           endif; ?>
         </div>
-        <a href="" class="top-news__link more-link">
+        <a href="<?php echo home_url("news"); ?>" class="top-news__link more-link">
           <span class="more-link__text more-link__text--black">View more</span>
           <span class="more-link__circle more-link__circle--yellow"></span>
         </a>

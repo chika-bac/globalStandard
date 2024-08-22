@@ -44,7 +44,7 @@ get_header();
                       </table>
                     </div>
                     <div class="program__button">
-                      <a href="" class="button button--secondary button--arrow">お申し込みはこちら</a>
+                      <a href="<?php echo home_url("contact"); ?>" class="button button--secondary button--arrow">お申し込みはこちら</a>
                     </div>
                   </div>
                 </div>

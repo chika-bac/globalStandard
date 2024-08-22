@@ -37,14 +37,14 @@
               if ($prev_post) :
               ?>
                 <div class="single-more-link-prev">
-                  <a href="<?php echo get_permalink($prev_post->ID); ?>" class="">
+                  <a href="<?php echo get_permalink($prev_post->ID); ?>">
                     < 前の記事へ</a>
                 </div>
               <?php endif;
               if ($next_post) :
               ?>
                 <div class="single-more-link-next">
-                  <a href="<?php echo get_permalink($next_post->ID); ?>" class="">次の記事へ ></a>
+                  <a href="<?php echo get_permalink($next_post->ID); ?>">次の記事へ ></a>
                 </div>
               <?php endif; ?>
             </div>

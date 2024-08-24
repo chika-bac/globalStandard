@@ -1,10 +1,10 @@
 /*
-360pxでviewport固定
+375pxでviewport固定
 ================================================ */
 !(function () {
   const viewport = document.querySelector('meta[name="viewport"]');
   function switchViewport() {
-    const value = window.outerWidth > 360 ? "width=device-width,initial-scale=1" : "width=360";
+    const value = window.outerWidth > 375 ? "width=device-width,initial-scale=1" : "width=375";
     if (viewport.getAttribute("content") !== value) {
       viewport.setAttribute("content", value);
     }

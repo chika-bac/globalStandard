@@ -224,7 +224,6 @@ page > service > flow
 }
 
 .flow__inner {
-  // margin-top: 60px;
 }
 
 .flow__title {
@@ -239,16 +238,12 @@ page > service > flow
 }
 
 .flow__item {
-  // display: flex;
-  // flex-direction: row;
-  // align-items: center;
-  // gap: 17px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: auto;
   position: relative;
+  gap: 17px;
 }
 
 .flow__step {
@@ -258,6 +253,9 @@ page > service > flow
   font-style: italic;
   font-weight: 500;
   line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .flow__step-en {
@@ -269,23 +267,73 @@ page > service > flow
 }
 
 .flow__text {
+  width: 72vw;
+  max-width: 400px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-inline: 20px;
+  position: relative;
+}
+
+.flow__text-1,
+.flow__text-2,
+.flow__text-3 {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 26px 32vw 0 32vw;
+    z-index: 1;
+
+    transform: translateX(-50%) translateY(100%);
+  }
+
+  @media screen and (min-width: 556px) {
+    // 幅が400px固定になったら、::afterのborder-widthの幅も固定にする
+    &::after {
+      border-width: 26px 200px 0 200px;
+    }
+  }
 }
 
 .flow__text-1 {
-  // background: #EDF3F8;
-  // background-image: url(../../assets/img/service-flow-bg1_sp.png);
+  background: #edf3f8;
+
+  &::after {
+    border-color: #edf3f8 transparent transparent transparent;
+  }
 }
 .flow__text-2 {
-  // background: #DDE8F0;
-  // background-image: url(../../assets/img/service-flow-bg2_sp.png);
+  background: #dde8f0;
+  &::after {
+    border-color: #dde8f0 transparent transparent transparent;
+  }
 }
 .flow__text-3 {
-  // background: #C7DBE9;
-  // background-image: url(../../assets/img/service-flow-bg3_sp.png);
+  background: #c7dbe9;
+
+  &::after {
+    border-color: #c7dbe9 transparent transparent transparent;
+  }
 }
 .flow__text-4 {
-  // background: #B0D0E5;
-  // background-image: url(../../assets/img/service-flow-bg4_sp.png);
+  background: #b0d0e5;
+
+  &::after {
+    border-color: #b0d0e5 transparent transparent transparent;
+  }
+}
+
+.flow__text-2,
+.flow__text-3,
+.flow__text-4 {
+  padding-top: 42px;
 }
 
 .flow__head {

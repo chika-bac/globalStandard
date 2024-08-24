@@ -2078,7 +2078,7 @@ top-service
   font-size: 28px;
   font-weight: 700;
   position: absolute;
-  bottom: 200px;
+  bottom: 60px;
   left: -8px;
 }
 @media screen and (min-width: 768px) {
@@ -3423,8 +3423,47 @@ page > service > service
 .program__content {
   margin-top: 60px;
 }
+.program__content::before {
+  content: "";
+  position: absolute;
+  top: 249%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 150%;
+  background: #edf3f8;
+  -webkit-transform: skewY(10deg);
+          transform: skewY(10deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  z-index: 0;
+}
+@media screen and (min-width: 500px) {
+  .program__content::before {
+    top: 200%;
+    height: 100%;
+  }
+}
 @media screen and (min-width: 768px) {
-  .program__content {
+  .program__content::before {
+    top: 229%;
+    height: 115%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .program__content::before {
+    top: 239%;
+    height: 110%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .program__content::before {
+    top: 230%;
+    height: 114%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .program__content::before {
     margin-top: 133px;
   }
 }

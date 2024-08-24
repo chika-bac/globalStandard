@@ -3549,6 +3549,16 @@ page > service > flow
 @media screen and (min-width: 768px) {
   .flow {
     background-image: url(../../assets/img/company-bg_pc.png);
+    margin-top: 160px;
+    padding-top: 80px;
+    padding-bottom: 119px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .flow__inner {
+    max-width: 1100px;
+    margin-inline: auto;
   }
 }
 
@@ -3561,6 +3571,17 @@ page > service > flow
 
 .flow__content {
   margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .flow__content {
+    margin-top: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .flow__item {
@@ -3576,6 +3597,18 @@ page > service > flow
   margin-left: auto;
   position: relative;
   gap: 17px;
+}
+@media screen and (min-width: 768px) {
+  .flow__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    gap: 0;
+  }
 }
 
 .flow__step {
@@ -3596,9 +3629,26 @@ page > service > flow
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .flow__step {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    gap: 7px;
+  }
+}
 
 .flow__step-en {
   font-size: 20px;
+}
+@media screen and (min-width: 768px) {
+  .flow__step-en {
+    line-height: 1.8;
+  }
 }
 
 .flow__step-num {
@@ -3612,6 +3662,28 @@ page > service > flow
   padding-bottom: 22px;
   padding-inline: 20px;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .flow__text {
+    width: 100%;
+    padding-top: clamp(1rem, -1.813rem + 5.86vw, 2.875rem);
+    height: 209px;
+    padding-left: clamp(2.25rem, 1.594rem + 1.37vw, 2.688rem);
+    padding-right: clamp(1.125rem, 0.563rem + 1.17vw, 1.5rem);
+  }
+}
+
+.flow__text-2,
+.flow__text-3,
+.flow__text-4 {
+  padding-top: 42px;
+}
+@media screen and (min-width: 768px) {
+  .flow__text-2,
+  .flow__text-3,
+  .flow__text-4 {
+    padding-top: clamp(1rem, -1.813rem + 5.86vw, 2.875rem);
+  }
 }
 
 .flow__text-1::after,
@@ -3638,12 +3710,28 @@ page > service > flow
     border-width: 26px 200px 0 200px;
   }
 }
+@media screen and (min-width: 768px) {
+  .flow__text-1::after,
+  .flow__text-2::after,
+  .flow__text-3::after {
+    top: 50%;
+    left: 100%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    border-width: 104.5px 0 104.5px 20px;
+  }
+}
 
 .flow__text-1 {
   background: #edf3f8;
 }
 .flow__text-1::after {
   border-color: #edf3f8 transparent transparent transparent;
+}
+@media screen and (min-width: 768px) {
+  .flow__text-1::after {
+    border-color: transparent transparent transparent #edf3f8;
+  }
 }
 
 .flow__text-2 {
@@ -3652,12 +3740,22 @@ page > service > flow
 .flow__text-2::after {
   border-color: #dde8f0 transparent transparent transparent;
 }
+@media screen and (min-width: 768px) {
+  .flow__text-2::after {
+    border-color: transparent transparent transparent #dde8f0;
+  }
+}
 
 .flow__text-3 {
   background: #c7dbe9;
 }
 .flow__text-3::after {
   border-color: #c7dbe9 transparent transparent transparent;
+}
+@media screen and (min-width: 768px) {
+  .flow__text-3::after {
+    border-color: transparent transparent transparent #c7dbe9;
+  }
 }
 
 .flow__text-4 {
@@ -3666,11 +3764,10 @@ page > service > flow
 .flow__text-4::after {
   border-color: #b0d0e5 transparent transparent transparent;
 }
-
-.flow__text-2,
-.flow__text-3,
-.flow__text-4 {
-  padding-top: 42px;
+@media screen and (min-width: 768px) {
+  .flow__text-4::after {
+    border-color: transparent transparent transparent #b0d0e5;
+  }
 }
 
 .flow__head {
@@ -3679,7 +3776,21 @@ page > service > flow
   font-size: 18px;
   font-weight: 700;
 }
+@media screen and (min-width: 768px) {
+  .flow__head {
+    font-size: clamp(1.125rem, 0.938rem + 0.39vw, 1.25rem);
+    line-height: 1.4;
+  }
+}
 
+.flow__body {
+  margin-top: 7px;
+}
+@media screen and (min-width: 768px) {
+  .flow__body {
+    margin-top: clamp(0.375rem, -0.75rem + 2.34vw, 1.125rem);
+  }
+}
 .flow__body span {
   display: block;
 }

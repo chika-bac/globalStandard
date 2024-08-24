@@ -220,10 +220,17 @@ page > service > flow
 
   @include mq(md) {
     background-image: url(../../assets/img/company-bg_pc.png);
+    margin-top: 160px;
+    padding-top: 80px;
+    padding-bottom: 119px;
   }
 }
 
 .flow__inner {
+  @include mq(md) {
+    max-width: 1100px;
+    margin-inline: auto;
+  }
 }
 
 .flow__title {
@@ -235,6 +242,12 @@ page > service > flow
 
 .flow__content {
   margin-top: 40px;
+
+  @include mq(md) {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .flow__item {
@@ -244,6 +257,12 @@ page > service > flow
   margin-left: auto;
   position: relative;
   gap: 17px;
+
+  @include mq(md) {
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+  }
 }
 
 .flow__step {
@@ -256,10 +275,20 @@ page > service > flow
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include mq(md) {
+    flex-direction: row;
+    align-items: end;
+    gap: 7px;
+  }
 }
 
 .flow__step-en {
   font-size: 20px;
+
+  @include mq(md) {
+    line-height: 1.8;
+  }
 }
 
 .flow__step-num {
@@ -273,6 +302,25 @@ page > service > flow
   padding-bottom: 22px;
   padding-inline: 20px;
   position: relative;
+
+  @include mq(md) {
+    width: 100%;
+    padding-top: clamp(1rem, -1.813rem + 5.86vw, 2.875rem); //16px ~ 46px
+
+    height: 209px;
+    padding-left: clamp(2.25rem, 1.594rem + 1.37vw, 2.688rem); // 36px ~ 43px
+    padding-right: clamp(1.125rem, 0.563rem + 1.17vw, 1.5rem); // 18px ~ 24px
+  }
+}
+
+.flow__text-2,
+.flow__text-3,
+.flow__text-4 {
+  padding-top: 42px;
+
+  @include mq(md) {
+    padding-top: clamp(1rem, -1.813rem + 5.86vw, 2.875rem); //16px ~ 46px
+  }
 }
 
 .flow__text-1,
@@ -290,14 +338,18 @@ page > service > flow
     border-style: solid;
     border-width: 26px 32vw 0 32vw;
     z-index: 1;
-
     transform: translateX(-50%) translateY(100%);
-  }
 
-  @media screen and (min-width: 556px) {
-    // 幅が400px固定になったら、::afterのborder-widthの幅も固定にする
-    &::after {
+    @media screen and (min-width: 556px) {
+      // 幅が400px固定になったら、::afterのborder-widthの幅も固定にする
       border-width: 26px 200px 0 200px;
+    }
+
+    @include mq(md) {
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+      border-width: 104.5px 0 104.5px 20px;
     }
   }
 }
@@ -307,12 +359,20 @@ page > service > flow
 
   &::after {
     border-color: #edf3f8 transparent transparent transparent;
+
+    @include mq(md) {
+      border-color: transparent transparent transparent #edf3f8;
+    }
   }
 }
 .flow__text-2 {
   background: #dde8f0;
   &::after {
     border-color: #dde8f0 transparent transparent transparent;
+
+    @include mq(md) {
+      border-color: transparent transparent transparent #dde8f0;
+    }
   }
 }
 .flow__text-3 {
@@ -320,6 +380,10 @@ page > service > flow
 
   &::after {
     border-color: #c7dbe9 transparent transparent transparent;
+
+    @include mq(md) {
+      border-color: transparent transparent transparent #c7dbe9;
+    }
   }
 }
 .flow__text-4 {
@@ -327,13 +391,11 @@ page > service > flow
 
   &::after {
     border-color: #b0d0e5 transparent transparent transparent;
-  }
-}
 
-.flow__text-2,
-.flow__text-3,
-.flow__text-4 {
-  padding-top: 42px;
+    @include mq(md) {
+      border-color: transparent transparent transparent #b0d0e5;
+    }
+  }
 }
 
 .flow__head {
@@ -341,9 +403,19 @@ page > service > flow
   text-align: center;
   font-size: 18px;
   font-weight: 700;
+
+  @include mq(md) {
+    font-size: clamp(1.125rem, 0.938rem + 0.39vw, 1.25rem); // 18px ~ 20px
+    line-height: 1.4;
+  }
 }
 
 .flow__body {
+  margin-top: 7px;
+
+  @include mq(md) {
+    margin-top: clamp(0.375rem, -0.75rem + 2.34vw, 1.125rem); // 6px ~ 18px
+  }
   & span {
     display: block;
   }

@@ -115,3 +115,17 @@ const openingAnimKeyframes = (content) => [
     opacity: 1,
   },
 ];
+
+/*
+スムーススクロール
+================================================ */
+const pageTop = document.querySelector("#js-page-top");
+window.addEventListener("scroll", (e) => {
+  e.preventDefault();
+  // 100pxスクロールするとクラスを付与
+  if (window.scrollY > 100) {
+    pageTop.classList.add("is-show");
+  } else {
+    pageTop.classList.remove("is-show");
+  }
+});

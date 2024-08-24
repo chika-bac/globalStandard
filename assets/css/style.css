@@ -1485,6 +1485,14 @@ layout > footer
   bottom: 20px;
   right: 10px;
   z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.floating.is-show {
+  opacity: 1;
+  visibility: visible;
 }
 @media screen and (min-width: 900px) {
   .floating {

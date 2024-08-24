@@ -105,6 +105,12 @@ single
   font-size: 14px;
   font-weight: 500;
   padding: 8px 16px;
+  transition: all 0.3s;
+
+  &:hover {
+    background: var(--color-main);
+    color: var(--color-white);
+  }
 }
 
 .single-more-link-prev {
@@ -223,7 +229,7 @@ blockquote.wp-block-quote {
     background: url(../../assets/img/quote-icon.png) no-repeat center center;
     position: absolute;
     height: 100%;
-    top: -90px;
+    top: -50px;
     left: 5px;
     z-index: -1;
 

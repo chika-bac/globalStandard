@@ -134,6 +134,12 @@ component > post-list
   background: #f8f8f8;
   display: grid;
   place-items: center;
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--color-white);
+    background: var(--color-main);
+  }
 
   @include mq(lg) {
     width: 50px;

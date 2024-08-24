@@ -29,12 +29,23 @@ component > button
   background: var(--color-main);
   color: var(--color-white);
   border: 1px solid currentColor;
+  transition: all 0.3s;
+
+  &:hover {
+    background: var(--color-main-dark);
+  }
 }
 
 .button--secondary {
   background: var(--color-white);
   color: var(--color-main);
   border: 1px solid currentColor;
+  transition: all 0.3s;
+
+  &:hover {
+    background: var(--color-main);
+    color: var(--color-white);
+  }
 }
 
 // footerのボタン
@@ -61,6 +72,10 @@ component > button
   &:hover {
     background: var(--color-accent-yellow);
     color: var(--color-black);
+    &:after {
+      content: url(../../assets/img/icon-arrow--black.svg);
+      right: 16px;
+    }
   }
 
   &:after {
@@ -69,6 +84,7 @@ component > button
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
+    transition: all 0.3s;
 
     @include mq(lg) {
       right: 29px;
@@ -85,6 +101,13 @@ component > button
   width: 295px;
   position: relative;
 
+  &:hover {
+    &:after {
+      content: url(../../assets/img/icon-arrow--white.svg);
+      right: 16px;
+    }
+  }
+
   @include mq(lg) {
     font-size: 16px;
     padding-top: 24px;
@@ -98,6 +121,7 @@ component > button
     right: 12px;
     top: 50%;
     transform: translateY(-50%);
+    transition: all 0.3s;
 
     @include mq(lg) {
       right: 26px;

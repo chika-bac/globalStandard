@@ -479,9 +479,19 @@ top-case
   width: 30px;
   height: 30px;
   transform: rotate(90deg);
+  margin-right: 6.5px;
+  transition: margin-right 0.3s;
+
+  &:hover {
+    margin-right: 0;
+  }
 }
 
-.top-case__more-link {
+.top-case__more-link svg {
+  fill: var(--color-white);
+  &:hover {
+    fill: var(--color-accent-yellow);
+  }
 }
 
 .top-case__link {

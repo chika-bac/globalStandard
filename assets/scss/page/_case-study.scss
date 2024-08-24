@@ -28,6 +28,11 @@ page > case-study
   display: grid;
   place-content: center;
   cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background: #ccc;
+  }
 
   @include mq(lg) {
     width: 208px;

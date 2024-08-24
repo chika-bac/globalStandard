@@ -257,12 +257,23 @@ component > button
   background: var(--color-main);
   color: var(--color-white);
   border: 1px solid currentColor;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.button--primary:hover {
+  background: var(--color-main-dark);
 }
 
 .button--secondary {
   background: var(--color-white);
   color: var(--color-main);
   border: 1px solid currentColor;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.button--secondary:hover {
+  background: var(--color-main);
+  color: var(--color-white);
 }
 
 .button--more {
@@ -291,6 +302,10 @@ component > button
   background: var(--color-accent-yellow);
   color: var(--color-black);
 }
+.button--more:hover:after {
+  content: url(../../assets/img/icon-arrow--black.svg);
+  right: 16px;
+}
 .button--more:after {
   content: url(../../assets/img/icon-arrow--yellow.svg);
   position: absolute;
@@ -298,6 +313,8 @@ component > button
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 @media screen and (min-width: 900px) {
   .button--more:after {
@@ -312,6 +329,10 @@ component > button
   text-align: center;
   width: 295px;
   position: relative;
+}
+.button--arrow:hover:after {
+  content: url(../../assets/img/icon-arrow--white.svg);
+  right: 16px;
 }
 @media screen and (min-width: 900px) {
   .button--arrow {
@@ -328,6 +349,8 @@ component > button
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 @media screen and (min-width: 900px) {
   .button--arrow:after {
@@ -905,6 +928,12 @@ component > post-list
   background: #f8f8f8;
   display: grid;
   place-items: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.page-numbers:hover {
+  color: var(--color-white);
+  background: var(--color-main);
 }
 @media screen and (min-width: 900px) {
   .page-numbers {
@@ -1463,7 +1492,7 @@ layout > footer
     right: 20px;
   }
 }
-.floating img {
+.floating svg {
   width: 40px;
   height: 40px;
 }
@@ -2221,6 +2250,19 @@ top-case
   height: 30px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+  margin-right: 6.5px;
+  -webkit-transition: margin-right 0.3s;
+  transition: margin-right 0.3s;
+}
+.top-case__more:hover {
+  margin-right: 0;
+}
+
+.top-case__more-link svg {
+  fill: var(--color-white);
+}
+.top-case__more-link svg:hover {
+  fill: var(--color-accent-yellow);
 }
 
 .top-case__link {
@@ -2480,6 +2522,13 @@ single
   font-size: 14px;
   font-weight: 500;
   padding: 8px 16px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.single-more-link-prev:hover,
+.single-more-link-next:hover {
+  background: var(--color-main);
+  color: var(--color-white);
 }
 
 .single-more-link-prev {
@@ -2604,7 +2653,7 @@ blockquote.wp-block-quote::before {
   background: url(../../assets/img/quote-icon.png) no-repeat center center;
   position: absolute;
   height: 100%;
-  top: -90px;
+  top: -50px;
   left: 5px;
   z-index: -1;
 }
@@ -3026,6 +3075,11 @@ page > case-study
   display: grid;
   place-content: center;
   cursor: pointer;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+.case__tab:hover {
+  background: #ccc;
 }
 @media screen and (min-width: 900px) {
   .case__tab {

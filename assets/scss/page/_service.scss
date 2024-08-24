@@ -138,7 +138,7 @@ page > service > service
 }
 
 .program__title-en {
-  color: #023e78;
+  color: var(--color-main);
   font-family: var(--font-family-en);
   font-size: 14px;
   font-style: italic;
@@ -234,7 +234,7 @@ page > service > flow
 }
 
 .flow__title {
-  color: #fff;
+  color: var(--color-white);
   text-align: center;
   font-size: 24px;
   font-weight: 700;
@@ -266,7 +266,7 @@ page > service > flow
 }
 
 .flow__step {
-  color: #fff400;
+  color: var(--color-accent-yellow);
   text-transform: uppercase;
   font-family: var(--font-family-en);
   font-style: italic;
@@ -399,7 +399,7 @@ page > service > flow
 }
 
 .flow__head {
-  color: #023e78;
+  color: var(--color-main);
   text-align: center;
   font-size: 18px;
   font-weight: 700;
@@ -422,7 +422,7 @@ page > service > flow
 }
 
 .flow__body--pink {
-  color: #e61264;
+  color: var(--color-accent-red);
 }
 
 /*!
@@ -499,7 +499,7 @@ page > service > qa
   }
 
   .qa__box.is-open & {
-    color: #e61264;
+    color: var(--color-accent-red);
   }
 }
 
@@ -518,11 +518,11 @@ page > service > qa
     display: block;
     width: 21px;
     height: 2px;
-    background: #1a1a1a;
+    background: var(--color-black);
     transform: translate(-50%, -50%);
 
     .qa__box.is-open & {
-      background: #e61264;
+      background: var(--color-accent-red);
     }
   }
 

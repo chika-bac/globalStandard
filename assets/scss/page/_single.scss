@@ -28,8 +28,8 @@ single
 }
 
 .single-post__category {
-  border: 1px solid #e61264;
-  color: #e61264;
+  border: 1px solid var(--color-accent-red);
+  color: var(--color-accent-red);
   font-size: 12px;
   font-weight: 500;
   padding: 8px 12px;
@@ -99,8 +99,8 @@ single
   // flex-basis: 要素の初期サイズを指定(auto: 要素のサイズに合わせる)
   flex: 0 0 auto;
   border-radius: 4px;
-  border: 1px solid #023e78;
-  color: #023e78;
+  border: 1px solid var(--color-main);
+  color: var(--color-main);
   text-align: center;
   font-size: 14px;
   font-weight: 500;
@@ -121,7 +121,7 @@ single > wp-block
 */
 h2.wp-block-heading {
   margin-top: 40px;
-  color: #023e78;
+  color: var(--color-main);
   font-size: 20px;
   font-weight: 700;
   background: #f8f8f8;
@@ -134,13 +134,13 @@ h2.wp-block-heading {
     display: inline-block;
     width: 6px;
     height: 46px;
-    background: #023e78;
+    background: var(--color-main);
     margin-right: 20px;
   }
 }
 h3.wp-block-heading {
   margin-top: 32px;
-  color: #023e78;
+  color: var(--color-main);
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 18px;
@@ -154,7 +154,7 @@ h3.wp-block-heading {
     display: block;
     width: 100%;
     height: 1px;
-    background: #023e78;
+    background: var(--color-main);
     margin-top: 5px;
 
     @include mq(lg) {
@@ -165,7 +165,7 @@ h3.wp-block-heading {
 
 h4.wp-block-heading {
   margin-top: 32px;
-  color: #023e78;
+  color: var(--color-main);
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 7px;
@@ -184,7 +184,7 @@ ul.wp-block-list {
   }
 
   & li {
-    color: #1a1a1a;
+    color: var(--color-black);
     font-size: 14px;
     font-weight: 500;
 
@@ -210,7 +210,7 @@ blockquote.wp-block-quote {
   padding: 30px 32px 23px;
   position: relative;
   z-index: 0;
-  border-left: 4px solid #023e78;
+  border-left: 4px solid var(--color-main);
 
   @include mq(lg) {
     margin-top: 40px;

@@ -88,7 +88,7 @@ page > about > mission
 
 .mission__title-en,
 .mission__title-jp {
-  color: #fff;
+  color: var(--color-white);
   line-height: 1.2;
 }
 
@@ -113,7 +113,7 @@ page > about > mission
 }
 
 .mission__text {
-  background: #fff;
+  background: var(--color-white);
   box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.16);
   padding: 20px 20px 18px 20px;
   position: absolute;
@@ -130,7 +130,7 @@ page > about > mission
 }
 
 .mission__head {
-  color: #023e78;
+  color: var(--color-main);
   text-align: center;
   font-size: 20px;
   font-weight: 700;
@@ -170,7 +170,7 @@ page > about > mission
 
 .company__inner {
   border: 1px solid #707070;
-  background: #fff;
+  background: var(--color-white);
   padding: 40px 20px;
 
   @include mq(md) {
@@ -209,8 +209,8 @@ page > about > mission
     }
   }
   & th {
-    border-bottom: 1px solid #023e78;
-    border-top: 1px solid #023e78;
+    border-bottom: 1px solid var(--color-main);
+    border-top: 1px solid var(--color-main);
     width: calc(100px / 335px * 100%);
     white-space: nowrap;
 

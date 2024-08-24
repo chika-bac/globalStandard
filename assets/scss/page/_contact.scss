@@ -58,7 +58,7 @@ page > contact-thanks
   font-weight: 500;
 
   & a {
-    color: #023e78;
+    color: var(--color-main);
     text-decoration-line: underline;
     margin-left: 8px;
     cursor: pointer;

@@ -75,7 +75,7 @@ page > case-study
     left: 0;
     width: 8px;
     height: 100%;
-    background: #023e78;
+    background: var(--color-main);
   }
 }
 
@@ -95,7 +95,7 @@ page > case-study
   }
 }
 .case__subtitle-en {
-  color: #023e78;
+  color: var(--color-main);
   font-family: var(--font-family-en);
   font-size: 14px;
   font-style: italic;
@@ -132,7 +132,7 @@ page > case-study
 }
 
 .case-item__head {
-  background: #023e78;
+  background: var(--color-main);
   border-radius: 12px 12px 0px 0px;
   display: flex;
   justify-content: space-between;
@@ -147,7 +147,7 @@ page > case-study
 }
 
 .case-item__title {
-  color: #fff;
+  color: var(--color-white);
   line-height: 1.5;
 
   @include mq(lg) {
@@ -185,7 +185,7 @@ page > case-study
   width: 90px;
   height: 68px;
   border-radius: 4px;
-  background: #fff;
+  background: var(--color-white);
   box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.16);
   display: flex;
   justify-content: center;
@@ -267,7 +267,7 @@ page > case-study
   }
 
   & svg {
-    fill: #e61264;
+    fill: var(--color-accent-red);
     width: 16px;
     height: 16px;
 

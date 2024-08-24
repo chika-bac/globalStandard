@@ -128,7 +128,7 @@ page > download > thanks
       }
 
       & a {
-        color: #023e78;
+        color: var(--color-main);
         text-decoration-line: underline;
         margin-left: 8px;
       }

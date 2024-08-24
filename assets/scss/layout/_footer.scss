@@ -57,7 +57,7 @@ layout > footer
 }
 
 .footer__title {
-  color: #fff;
+  color: var(--color-white);
   line-height: 1.2;
   & span {
     display: block;
@@ -89,8 +89,8 @@ layout > footer
 
 .footer__bottom {
   padding-top: 70px;
-  background: #1a1a1a;
-  color: #fff;
+  background: var(--color-black);
+  color: var(--color-white);
 
   @include mq(lg) {
     padding-top: 120px;

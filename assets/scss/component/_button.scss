@@ -26,14 +26,14 @@ component > button
 }
 
 .button--primary {
-  background: #023e78;
-  color: #fff;
+  background: var(--color-main);
+  color: var(--color-white);
   border: 1px solid currentColor;
 }
 
 .button--secondary {
-  background: #fff;
-  color: #023e78;
+  background: var(--color-white);
+  color: var(--color-main);
   border: 1px solid currentColor;
 }
 
@@ -41,8 +41,8 @@ component > button
 .button--more {
   font-family: var(--font-family-en);
   background: transparent;
-  color: #fff400;
-  border: 2px solid #fff400;
+  color: var(--color-accent-yellow);
+  border: 2px solid var(--color-accent-yellow);
   padding-top: 27px;
   padding-bottom: 27px;
   width: 295px;
@@ -51,7 +51,7 @@ component > button
   transition: all 0.3s;
 
   @include mq(lg) {
-    border: 3px solid #fff400;
+    border: 3px solid var(--color-accent-yellow);
     padding-top: 31px;
     padding-bottom: 32px;
     width: 315px;
@@ -59,8 +59,8 @@ component > button
   }
 
   &:hover {
-    background: #fff400;
-    color: #1a1a1a;
+    background: var(--color-accent-yellow);
+    color: var(--color-black);
   }
 
   &:after {
@@ -118,23 +118,23 @@ component > button
   font-style: italic;
   font-weight: 500;
   position: relative;
-  color: #fff;
+  color: var(--color-white);
 
   &.more-link__text--blue {
-    color: #023e78;
+    color: var(--color-main);
 
     &::after {
-      border-right-color: #023e78;
-      border-bottom-color: #023e78;
+      border-right-color: var(--color-main);
+      border-bottom-color: var(--color-main);
     }
   }
 
   &.more-link__text--black {
-    color: #1a1a1a;
+    color: var(--color-black);
 
     &::after {
-      border-right-color: #1a1a1a;
-      border-bottom-color: #1a1a1a;
+      border-right-color: var(--color-black);
+      border-bottom-color: var(--color-black);
     }
   }
 
@@ -152,8 +152,8 @@ component > button
     width: 64px;
     height: 10px;
     border: none;
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
+    border-right: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-white);
     transform: skew(45deg);
     transition: all 0.3s;
 
@@ -178,17 +178,17 @@ component > button
 .more-link__circle {
   background: transparent;
   border-radius: 50%;
-  border: 2px solid #fff400;
+  border: 2px solid var(--color-accent-yellow);
   width: 40px;
   height: 40px;
   margin-left: 57px;
 
   &.more-link__circle--yellow {
-    background: #fff400;
+    background: var(--color-accent-yellow);
   }
 
   @include mq(md) {
-    border: 3px solid #fff400;
+    border: 3px solid var(--color-accent-yellow);
     width: 51px;
     height: 51px;
     margin-left: 89px;

@@ -166,3 +166,19 @@ function get_main_image_class()
  * ----------------------------------------**/
 add_image_size('member', 480, 640, false);
 add_image_size('program', 1120, 1792, false);
+
+/** ------------------------------------------
+ * 投稿個別ページのパンくず表記を統一
+ * ----------------------------------------**/
+function custom_breadcrumbs_title($breadcrumb_trail)
+{
+  if (is_single()) {
+    foreach ($breadcrumb_trail->breadcrumbs as $breadcrumb) {
+      if (in_array('post', $breadcrumb->get_types())) {
+        $breadcrumb->set_title('ニュース詳細');
+      }
+    }
+  }
+  return $breadcrumb_trail;
+}
+add_filter('bcn_after_fill', 'custom_breadcrumbs_title');

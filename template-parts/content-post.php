@@ -13,7 +13,9 @@
           <span class="new-label">NEW</span>
         <?php endif; ?>
       </div>
-      <time class="post__list-time post__list-right" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+      <div class="post__list-right">
+        <time class="post__list-time" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+      </div>
     </div>
     <h3 class="post__list-title"><?php echo title_trim(get_the_title(), 41); ?></h3>
   </div>

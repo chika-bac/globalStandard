@@ -21,8 +21,6 @@ page > case-study
 
 .case__tab {
   width: 294px;
-  padding-top: 12px;
-  padding-bottom: 12px;
   border-radius: 4px;
   background: #eee;
   display: grid;
@@ -43,6 +41,8 @@ page > case-study
   text-align: center;
   font-size: 14px;
   font-weight: 700;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .case__container {

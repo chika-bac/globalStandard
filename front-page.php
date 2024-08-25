@@ -96,7 +96,6 @@
         </a>
       </div>
     </div>
-    </div>
   </section>
   <!-- end top-service -->
 
@@ -158,7 +157,6 @@
           <span class="more-link__circle"></span>
         </a>
       </div>
-    </div>
     </div>
   </section>
   <!-- end top-case -->

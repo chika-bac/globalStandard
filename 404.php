@@ -9,6 +9,7 @@
       </div>
       <div class="notfound__link">
         <a href="<?php echo esc_url(home_url('/')); ?>" class="button button--secondary button--arrow">トップページへ戻る</a>
+      </div>
     </main>
     <?php get_sidebar(); ?>
   </div>

@@ -38,8 +38,9 @@ get_header();
                           <th>対象</th>
                           <td><?php the_sub_field('program_target'); ?></td>
                         </tr>
-                        <th>費用</th>
-                        <td><?php the_sub_field('program_price'); ?></td>
+                        <tr>
+                          <th>費用</th>
+                          <td><?php the_sub_field('program_price'); ?></td>
                         </tr>
                       </table>
                     </div>

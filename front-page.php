@@ -49,7 +49,7 @@
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-program-number01.png" alt="">
             </div>
             <div class="top-service__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/wp_upload/service-program01.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-program01.png" alt="">
               <p class="top-service__name"><span>ビジネス英語研修</span></p>
             </div>
             <p class="top-service__text">
@@ -62,7 +62,7 @@
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-program-number02.png" alt="">
             </div>
             <div class="top-service__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/wp_upload/service-program02.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-program02.png" alt="">
               <p class="top-service__name">
                 <span>異文化</span>
                 <span>コミュニケーション研修</span>
@@ -77,7 +77,7 @@
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-program-number03.png" alt="">
             </div>
             <div class="top-service__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/wp_upload/service-program03.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-program03.png" alt="">
               <p class="top-service__name">
                 <span>ビジネス留学</span>
                 <span>サポートプログラム</span>
